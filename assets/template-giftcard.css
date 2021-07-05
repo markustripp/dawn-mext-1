@@ -110,6 +110,18 @@ h2,
   color: rgba(var(--color-outline-button-labels-rgb), 0.75);
 }
 
+.underlined-link {
+  color: rgba(var(--color-outline-button-labels-rgb), 0.85);
+  text-underline-offset: 0.3rem;
+  text-decoration-thickness: 0.1rem;
+  transition: text-decoration-thickness ease 100ms;
+}
+
+.underlined-link:hover {
+  color: var(--color-outline-button-labels);
+  text-decoration-thickness: 0.2rem;
+}
+
 .button {
   font-family: inherit;
   cursor: pointer;
@@ -148,6 +160,7 @@ h2,
 }
 
 .gift-card__title {
+  color: var(--color-text);
   text-align: center;
   word-break: break-word;
   padding: 4rem 0 1.7rem;
@@ -172,7 +185,7 @@ h2,
 @media only screen and (min-width: 750px) {
   .gift-card__image-wrapper {
     margin-bottom: 0;
-    width: 40rem;
+    width: 57rem;
   }
 }
 
@@ -222,7 +235,7 @@ h2,
 .gift-card__number {
   background-color: var(--color-background);
   border: none;
-  color: var(--color-foreground);
+  color: var(--color-text);
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.6;
