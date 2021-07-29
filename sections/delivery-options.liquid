@@ -1,0 +1,8 @@
+{%- assign delivery_options = product_variant.delivery_options.options -%}
+{%- if delivery_options.size > 0 -%}
+  <delivery-options-list class="delivery-options-list">
+    {% for option in delivery_options %}
+      <p>{{ option }}</p>
+    {% endfor %}
+  </delivery-options-list>
+{%- endif -%}

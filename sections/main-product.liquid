@@ -278,11 +278,17 @@
                 {%- endform -%}
               </product-form>
 
+              <delivery-options
+                data-base-url="{{ shop.url }}{{ routes.root_url }}"
+                data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+              >
+                <p>Delivery Options Placeholder</p>
+              </delivery-options>
+
+              <script src="{{ 'delivery-options.js' | asset_url }}" defer="defer"></script>
+
               {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
 
-              <div>
-                test
-              </div>
               {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
 
               <pickup-availability class="product__pickup-availabilities no-js-hidden"
