@@ -330,6 +330,24 @@
         "section_padding_heading": "Section padding",
         "padding_top": "Top padding",
         "padding_bottom": "Bottom padding"
+      },
+      "colors": {
+        "accent_1": {
+          "label": "Accent 1"
+        },
+        "accent_2": {
+          "label": "Accent 2"
+        },
+        "background_1": {
+          "label": "Background 1"
+        },
+        "background_2": {
+          "label": "Background 2"
+        },
+        "inverse": {
+          "label": "Inverse"
+        },
+        "label": "Color scheme"
       }
     },
     "announcement-bar": {
