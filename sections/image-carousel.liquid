@@ -1,0 +1,111 @@
+<script src="https://cdn.jsdelivr.net/npm/siema@1.5.1/dist/siema.min.js" defer="defer"></script>
+
+<div class="xrelative">
+  <div class="siema" data-duration="{{ section.settings.duration }}">
+    {% for block in section.blocks %}
+        {% if block.type == 'images' %}
+          <img 
+            class="xw-full" {{ block.shopify_attributes }}
+            src="{{ block.settings.image | image_url: width: 1600 }}"
+          >
+        {% endif %}
+      {% endfor %}
+  </div>
+
+  <button class="prev xflex xitems-center xabsolute xh-full xtop-0 xleft-0 xz-10 xpx-5 xgroup">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="xw-20 xh-20 xtext-white xopacity-60 group-hover:xopacity-100 bi bi-arrow-lefxcircle-fill" viewBox="0 0 16 16">
+      <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+    </svg>
+  </button>
+  <button class="next xflex xitems-center xabsolute xh-full xtop-0 xright-0 xz-10 xpx-5 xgroup">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="xw-20 xh-20 xtext-white xopacity-60 group-hover:xopacity-100 bi bi-arrow-righxcircle-fill" viewBox="0 0 16 16">
+      <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+    </svg>
+  </button>
+
+  <div class="xabsolute xbottom-1/4 xmx-auto xleft-0 xright-0 xw-1/2 xz-20 xflex xflex-col xitems-center xjustify-center">
+    <div class="xfont-bold xfont-heading xtext-4xl xtext-white">
+      {{ section.settings.title }}
+    </div>
+    {% if section.settings.button_text %}
+      <a href="{{ section.settings.button_link }}" class="xbg-white xpx-12 xuppercase xmt-8 xpy-6 xfont-light">
+        {{ section.settings.button_text }}
+      </a>
+    {% endif %}
+  </div>
+</div>
+
+{% javascript %}
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll('.siema').forEach(el => {
+    const duration = el.dataset.duration
+    const carousel = new Siema({
+      selector: el,
+      loop: true
+    })
+    
+    let interval = setInterval(() => carousel.next(), duration)
+    const parent = el.parentElement
+    
+    parent.querySelector('.prev').addEventListener('click', () => {
+      clearInterval(interval)
+      carousel.prev()
+      interval = setInterval(() => carousel.next(), duration)
+    });
+    parent.querySelector('.next').addEventListener('click', () => {
+      clearInterval(interval)
+      carousel.next()
+      interval = setInterval(() => carousel.next(), duration)
+    });
+  })
+});
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Image Carousel",
+  "tag": "section",
+  "class": "spaced-section spaced-section--full-width",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "number",
+      "id": "duration",
+      "label": "Loop interval",
+      "default": 6000
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Images",
+      "type": "images",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image Carousel"
+    }
+  ]
+}
+{% endschema %}
