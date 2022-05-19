@@ -30,6 +30,9 @@
     {% render 'meta-tags' %}
 
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+    <script>
+      console.log('in theme.liquid')
+    </script>
     {{ content_for_header }}
 
     {%- liquid
