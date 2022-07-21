@@ -1,30 +1,12 @@
-.collage-section + .collage-section .no-heading {
-  margin-top: -4rem;
-}
-
-@media screen and (max-width: 749px) {
-  .collage-wrapper-title {
-    margin-top: -1rem;
-  }
-}
-
-@media screen and (min-width: 750px) {
-  .collage-wrapper.no-heading {
-    margin-top: calc(6rem + var(--page-width-margin));
-  }
-
-  .collage-section + .collage-section .no-heading {
-    margin-top: calc(-4rem - var(--page-width-margin));
-  }
-}
-
 .collage-wrapper-title {
+  margin-top: 0;
   margin-bottom: 3rem;
 }
 
 .collage {
   display: grid;
-  gap: 1rem;
+  row-gap: var(--grid-mobile-vertical-spacing);
+  column-gap: var(--grid-mobile-horizontal-spacing);
 }
 
 .collage--mobile {
@@ -34,6 +16,8 @@
 @media screen and (min-width: 750px) {
   .collage {
     grid-template-columns: 1fr 1fr 1fr;
+    row-gap: var(--grid-desktop-vertical-spacing);
+    column-gap: var(--grid-desktop-horizontal-spacing);
   }
 }
 
@@ -95,12 +79,6 @@
     grid-column: 1 / span 3;
     max-width: 100%;
   }
-
-  .collage-card:not(.collage-card--left):not(.collage-card--right) > * {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
 }
 
 .collage-card .card,
@@ -158,7 +136,6 @@
 
 .collage-content {
   justify-content: center;
-  overflow: hidden;
 }
 
 .collage-content h3 {
@@ -493,4 +470,27 @@
 
 .collage-video__modal-video iframe {
   position: static;
+}
+
+.collage-card:not(.collage-product, .collage-collection) {
+  border: var(--media-border-width) solid rgba(var(--color-foreground), var(--media-border-opacity));
+  border-radius: var(--media-radius);
+  background: rgb(var(--color-background));
+}
+
+.collage-card:not(.collage-product, .collage-collection):after {
+  border-radius: var(--media-radius);
+  box-shadow: var(--media-shadow-horizontal-offset) var(--media-shadow-vertical-offset) var(--media-shadow-blur-radius) rgba(var(--color-foreground), var(--media-shadow-opacity));
+  content: '';
+  position: absolute;
+  width: calc(var(--media-border-width) * 2 + 100%);
+  height: calc(var(--media-border-width) * 2 + 100%);
+  top: calc(var(--media-border-width) * -1);
+  left: calc(var(--media-border-width) * -1);
+  z-index: -1;
+}
+
+.collage-card:not(.collage-product, .collage-collection) .media {
+  border-radius: calc(var(--media-radius) - var(--media-border-width));
+  overflow: hidden;
 }
