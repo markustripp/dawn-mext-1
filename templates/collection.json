@@ -12,9 +12,9 @@
       "settings": {
         "products_per_page": 16,
         "image_ratio": "adapt",
-        "show_secondary_image": false,
+        "show_secondary_image": true,
         "add_image_padding": false,
-        "show_image_outline": true,
+        "show_image_outline": false,
         "show_vendor": false,
         "show_rating": false,
         "enable_filtering": true,
