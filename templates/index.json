@@ -182,6 +182,12 @@
         "show_vendor": false,
         "show_rating": false
       }
+    },
+    "166075888494baaec7": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "Our social lookbook"
+      }
     }
   },
   "order": [
@@ -190,6 +196,7 @@
     "1660758718b193aeb0",
     "rich_text",
     "16607588025304ad07",
-    "16607588504ef03feb"
+    "16607588504ef03feb",
+    "166075888494baaec7"
   ]
 }
