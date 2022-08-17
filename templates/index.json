@@ -252,6 +252,22 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "16607589592e5ec82a": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "BUTT STUFF",
+        "collection": "butt-stuff",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    },
     "1660758718b193aeb0": {
       "type": "image-with-text",
       "blocks": {
@@ -303,22 +319,6 @@
         "mobile_content_alignment": "left"
       }
     },
-    "16607589592e5ec82a": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "BUTT STUFF",
-        "collection": "butt-stuff",
-        "products_to_show": 4,
-        "show_view_all": true,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "add_image_padding": false,
-        "show_image_outline": true,
-        "show_vendor": false,
-        "show_rating": false
-      }
-    },
     "16607590038db6fcfc": {
       "type": "apps",
       "blocks": {
@@ -357,7 +357,8 @@
         "16607590664028530a-0": {
           "type": "column",
           "settings": {
-            "title": "Column",
+            "image": "shopify:\/\/shop_images\/Live_With_Kell_logo_gray_bg_2bc8b526-b245-43a9-b0a2-5b0b5855210f.png",
+            "title": "",
             "text": "",
             "link_label": "",
             "link": ""
@@ -366,7 +367,8 @@
         "16607590664028530a-1": {
           "type": "column",
           "settings": {
-            "title": "Column",
+            "image": "shopify:\/\/shop_images\/Stephen_Colbert_logo_gray_bg_bd38582d-5935-4556-90df-d18e92e3da8b.png",
+            "title": "",
             "text": "",
             "link_label": "",
             "link": ""
@@ -436,8 +438,8 @@
     "166075888494baaec7",
     "166075891041478f50",
     "16607589256ae7078c",
-    "1660758718b193aeb0",
     "16607589592e5ec82a",
+    "1660758718b193aeb0",
     "16607590038db6fcfc",
     "1660759019dae47df3",
     "16607590660047f222",
