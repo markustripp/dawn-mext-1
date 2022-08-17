@@ -22,7 +22,7 @@
             "type": "announcement",
             "settings": {
               "text": "Free Shipping on Orders Over $50",
-              "color_scheme": "accent-1",
+              "color_scheme": "accent-2",
               "link": ""
             }
           }
