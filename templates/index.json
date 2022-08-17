@@ -29,6 +29,7 @@
         "button"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/banner.gif-yellow-2.gif",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "adapt_height_first_image": false,
@@ -300,8 +301,8 @@
         "166075899324c06463-2": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": ""
+            "button_label": "LEARN HOW",
+            "button_link": "https:\/\/join.collabs.shopify.com\/community\/apply\/tLpoWnNrlFk"
           }
         }
       },
