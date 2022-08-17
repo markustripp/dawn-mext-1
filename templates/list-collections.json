@@ -2,12 +2,61 @@
   "sections": {
     "main": {
       "type": "main-list-collections",
+      "disabled": true,
       "settings": {
-        "image_ratio": "square"
+        "title": "Collections",
+        "sort": "products_high",
+        "image_ratio": "adapt",
+        "color_scheme": "background-1",
+        "image_padding": false
+      }
+    },
+    "1660764427687f5a89": {
+      "type": "collection-list",
+      "blocks": {
+        "166076442791996a27-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "divine"
+          }
+        },
+        "166076442791996a27-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "oliver-hibert"
+          }
+        },
+        "166076442791996a27-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "thomas-fernandez"
+          }
+        },
+        "e0f0ac90-5e3f-460b-a2a1-85a68f8aef10": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "tom-of-finland"
+          }
+        }
+      },
+      "block_order": [
+        "166076442791996a27-0",
+        "166076442791996a27-1",
+        "166076442791996a27-2",
+        "e0f0ac90-5e3f-460b-a2a1-85a68f8aef10"
+      ],
+      "settings": {
+        "title": "Collections",
+        "image_ratio": "square",
+        "color_scheme": "background-1",
+        "swipe_on_mobile": false,
+        "image_padding": false,
+        "show_view_all": false
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1660764427687f5a89"
   ]
 }
