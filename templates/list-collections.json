@@ -46,11 +46,11 @@
         "e0f0ac90-5e3f-460b-a2a1-85a68f8aef10"
       ],
       "settings": {
-        "title": "Collections",
-        "image_ratio": "square",
-        "color_scheme": "background-1",
-        "swipe_on_mobile": false,
-        "image_padding": false,
+        "title": "ARTIST COLLABS",
+        "image_ratio": "adapt",
+        "color_scheme": "background-2",
+        "swipe_on_mobile": true,
+        "image_padding": true,
         "show_view_all": false
       }
     }
