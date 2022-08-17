@@ -42,6 +42,12 @@
         "show_text_below": true
       }
     },
+    "1660760840b614851d": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": ""
+      }
+    },
     "featured_products": {
       "type": "featured-collection",
       "settings": {
@@ -431,6 +437,7 @@
   },
   "order": [
     "image_banner",
+    "1660760840b614851d",
     "featured_products",
     "1660758993f3d6b9e6",
     "16607588025304ad07",
