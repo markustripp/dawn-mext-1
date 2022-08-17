@@ -52,24 +52,49 @@
       "footer": {
         "type": "footer",
         "blocks": {
+          "ad073c21-dc5e-48ec-9422-83b586f01b18": {
+            "type": "text",
+            "settings": {
+              "heading": "GET 10% OFF YOUR FIRST ORDER",
+              "subtext": "<p>Subscribe to our email list to stay in the loop on all our latest styles, plus get a 10% off coupon code today!<\/p>"
+            }
+          },
           "footer-0": {
             "type": "link_list",
             "settings": {
-              "heading": "Quick links",
-              "menu": "footer"
+              "heading": "#",
+              "menu": "footer-1"
+            }
+          },
+          "dc171b50-f4d6-4dd9-bfc5-76d8f6b762f6": {
+            "type": "link_list",
+            "settings": {
+              "heading": "#",
+              "menu": "footer-2"
+            }
+          },
+          "cf0bf0ce-6846-4a53-8023-b65005ce48d0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/logo_94a9f367-0bb0-45bc-aa5d-9f12b71c34c1.png",
+              "image_width": 100,
+              "alignment": ""
             }
           }
         },
         "block_order": [
-          "footer-0"
+          "ad073c21-dc5e-48ec-9422-83b586f01b18",
+          "footer-0",
+          "dc171b50-f4d6-4dd9-bfc5-76d8f6b762f6",
+          "cf0bf0ce-6846-4a53-8023-b65005ce48d0"
         ],
         "settings": {
           "color_scheme": "background-1",
-          "newsletter_enable": true,
+          "newsletter_enable": false,
           "newsletter_heading": "Subscribe to our emails",
-          "show_social": false,
-          "enable_country_selector": true,
-          "enable_language_selector": true,
+          "show_social": true,
+          "enable_country_selector": false,
+          "enable_language_selector": false,
           "payment_enable": true
         }
       }
