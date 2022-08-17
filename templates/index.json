@@ -411,6 +411,22 @@
         "button_link": "",
         "swipe_on_mobile": false
       }
+    },
+    "16607591887a4795da": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "GREAT GIFT IDEAS",
+        "collection": "great-gifts",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
     }
   },
   "order": [
@@ -427,6 +443,7 @@
     "1660758993f3d6b9e6",
     "16607590038db6fcfc",
     "1660759019dae47df3",
-    "16607590660047f222"
+    "16607590660047f222",
+    "16607591887a4795da"
   ]
 }
