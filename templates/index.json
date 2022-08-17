@@ -263,6 +263,22 @@
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
       }
+    },
+    "16607589592e5ec82a": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "BUTT STUFF",
+        "collection": "",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
     }
   },
   "order": [
@@ -274,6 +290,7 @@
     "16607588504ef03feb",
     "166075888494baaec7",
     "166075891041478f50",
-    "16607589256ae7078c"
+    "16607589256ae7078c",
+    "16607589592e5ec82a"
   ]
 }
