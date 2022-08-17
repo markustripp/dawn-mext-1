@@ -188,6 +188,81 @@
       "settings": {
         "custom_liquid": "Our social lookbook"
       }
+    },
+    "166075891041478f50": {
+      "type": "image-with-text",
+      "blocks": {
+        "1660758909ce8ec6e8-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "1660758909ce8ec6e8-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "1660758909ce8ec6e8-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1660758909ce8ec6e8-0",
+        "1660758909ce8ec6e8-1",
+        "1660758909ce8ec6e8-2"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left"
+      }
+    },
+    "16607589256ae7078c": {
+      "type": "slideshow",
+      "blocks": {
+        "166075892566c3d966-0": {
+          "type": "slide",
+          "settings": {
+            "heading": "",
+            "heading_size": "medium",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "166075892566c3d966-0"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
     }
   },
   "order": [
@@ -197,6 +272,8 @@
     "rich_text",
     "16607588025304ad07",
     "16607588504ef03feb",
-    "166075888494baaec7"
+    "166075888494baaec7",
+    "166075891041478f50",
+    "16607589256ae7078c"
   ]
 }
