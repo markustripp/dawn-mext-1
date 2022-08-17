@@ -25,7 +25,7 @@
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "Free Shipping on Orders Over $50",
+              "text": "Add $12 more to earn FREE SHIPPING",
               "color_scheme": "accent-2",
               "link": ""
             }
