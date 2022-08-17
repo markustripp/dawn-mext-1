@@ -1,5 +1,11 @@
 {
   "sections": {
+    "1660766384e0ab106a": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "YOU ARE $12.95 AWAY FROM FREE SHIPPING!"
+      }
+    },
     "cart-items": {
       "type": "main-cart-items",
       "settings": {
@@ -28,16 +34,79 @@
         "show_cart_note": false
       }
     },
-    "1660766384e0ab106a": {
-      "type": "custom-liquid",
+    "16607664930f4b7324": {
+      "type": "featured-product",
+      "blocks": {
+        "166076649384801554-0": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "166076649384801554-1": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "166076649384801554-2": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.metafields.descriptors.subtitle.value }}",
+            "text_style": "subtitle"
+          }
+        },
+        "166076649384801554-3": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "166076649384801554-4": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "166076649384801554-5": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "166076649384801554-6": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true
+          }
+        },
+        "166076649384801554-7": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "166076649384801554-0",
+        "166076649384801554-1",
+        "166076649384801554-2",
+        "166076649384801554-3",
+        "166076649384801554-4",
+        "166076649384801554-5",
+        "166076649384801554-6",
+        "166076649384801554-7"
+      ],
       "settings": {
-        "custom_liquid": "YOU ARE $12.95 AWAY FROM FREE SHIPPING!"
+        "product": "",
+        "secondary_background": false,
+        "hide_variants": false,
+        "enable_video_looping": false
       }
     }
   },
   "order": [
+    "1660766384e0ab106a",
     "cart-items",
     "cart-footer",
-    "1660766384e0ab106a"
+    "16607664930f4b7324"
   ]
 }
