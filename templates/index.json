@@ -232,8 +232,8 @@
             "heading": "",
             "heading_size": "medium",
             "subheading": "",
-            "button_label": "",
-            "link": "",
+            "button_label": "CLICK",
+            "link": "shopify:\/\/collections\/divine",
             "button_style_secondary": false,
             "box_align": "middle-center",
             "show_text_box": true,
@@ -287,7 +287,7 @@
         "1660758718267bc75d-0": {
           "type": "heading",
           "settings": {
-            "heading": "MADE IN THE USA SOCKS",
+            "heading": "MADE IN THE USA",
             "heading_size": "h1"
           }
         },
@@ -441,10 +441,20 @@
         },
         "c2c9ae96-ebe1-44b7-a892-9c5ac7a77277": {
           "type": "column",
-          "disabled": true,
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/Rachel_Maddow_logo_gray_bg_41139456-7e0d-4998-b508-5215e89e56dc.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "eeda520a-1862-45ad-a102-a0f6caca776e": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Vogue_Italia_logo_gray_bg_650e6fc9-5ed7-4ef6-8048-3735fc0dd32a.png",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -459,7 +469,8 @@
         "a5b8f81f-300b-4019-bc78-97d301a03503",
         "f932b63a-777a-403d-9960-e64345af7d06",
         "9fbd18df-df75-465d-889b-4a2766d00f4f",
-        "c2c9ae96-ebe1-44b7-a892-9c5ac7a77277"
+        "c2c9ae96-ebe1-44b7-a892-9c5ac7a77277",
+        "eeda520a-1862-45ad-a102-a0f6caca776e"
       ],
       "settings": {
         "title": "AS SEEN ON",
