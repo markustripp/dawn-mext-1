@@ -78,7 +78,7 @@
     "product-recommendations": {
       "type": "product-recommendations",
       "settings": {
-        "heading": "You may also like",
+        "heading": "YOU MAY ALSO LIKE",
         "image_ratio": "adapt",
         "show_secondary_image": false,
         "add_image_padding": false,
