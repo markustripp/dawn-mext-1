@@ -252,6 +252,57 @@
         "accessibility_info": "Slideshow about our brand"
       }
     },
+    "1660758718b193aeb0": {
+      "type": "image-with-text",
+      "blocks": {
+        "2bb78034-0627-4377-b689-32c651619fa0": {
+          "type": "caption",
+          "settings": {
+            "caption": "ONE SIZE FITS ALL",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "1660758718267bc75d-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "MADE IN THE USA SOCKS",
+            "heading_size": "h1"
+          }
+        },
+        "1660758718267bc75d-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Quality you can see and feel!<\/p>",
+            "text_style": "body"
+          }
+        },
+        "1660758718267bc75d-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "SHOP BEST SELLERS",
+            "button_link": "shopify:\/\/collections\/popular"
+          }
+        }
+      },
+      "block_order": [
+        "2bb78034-0627-4377-b689-32c651619fa0",
+        "1660758718267bc75d-0",
+        "1660758718267bc75d-1",
+        "1660758718267bc75d-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/infographic_2000x2000-web.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left"
+      }
+    },
     "16607589592e5ec82a": {
       "type": "featured-collection",
       "settings": {
@@ -298,47 +349,6 @@
         "show_image_outline": true,
         "show_vendor": false,
         "show_rating": false
-      }
-    },
-    "1660758718b193aeb0": {
-      "type": "image-with-text",
-      "blocks": {
-        "1660758718267bc75d-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "1660758718267bc75d-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
-          }
-        },
-        "1660758718267bc75d-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "1660758718267bc75d-0",
-        "1660758718267bc75d-1",
-        "1660758718267bc75d-2"
-      ],
-      "settings": {
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "left"
       }
     },
     "16607590660047f222": {
@@ -426,10 +436,10 @@
     "166075888494baaec7",
     "166075891041478f50",
     "16607589256ae7078c",
+    "1660758718b193aeb0",
     "16607589592e5ec82a",
     "16607590038db6fcfc",
     "1660759019dae47df3",
-    "1660758718b193aeb0",
     "16607590660047f222",
     "16607591887a4795da"
   ]
