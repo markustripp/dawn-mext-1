@@ -34,6 +34,25 @@
         "show_cart_note": false
       }
     },
+    "1660767273792f1785": {
+      "type": "rich-text",
+      "blocks": {
+        "166076727314b8b445-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "WE THINK YOU'LL LOVE THESE!",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "166076727314b8b445-0"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "full_width": true
+      }
+    },
     "16607664930f4b7324": {
       "type": "featured-product",
       "blocks": {
@@ -110,6 +129,7 @@
     "1660766384e0ab106a",
     "cart-items",
     "cart-footer",
+    "1660767273792f1785",
     "16607664930f4b7324"
   ]
 }
