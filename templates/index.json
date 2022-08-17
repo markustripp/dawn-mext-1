@@ -382,15 +382,65 @@
         },
         "16607590664028530a-2": {
           "type": "column",
-          "disabled": true,
           "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "image": "shopify:\/\/shop_images\/The_View_logo_white_bg.png",
+            "title": "",
+            "text": "",
             "link_label": "",
             "link": ""
           }
         },
         "26aa5f65-69c6-480b-9905-5cf1365baf9e": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Wired_logo_white_bg.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "f934b3e7-d2af-4828-9f79-cf32b1e47ba8": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Daily_Mail_logo_gray_bg_f3e725d7-55b2-47d0-b3da-6bf80a59a036.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "a5b8f81f-300b-4019-bc78-97d301a03503": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Bloomberg_logo_gray_bg_b5d0740f-1fda-4df1-94f9-16ec881ecca6.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "f932b63a-777a-403d-9960-e64345af7d06": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Marie_Claire_logo_gray_bg_1aca6521-7148-460c-abf6-05db6a81bdd5.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "9fbd18df-df75-465d-889b-4a2766d00f4f": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Page_Six_logo_gray_bg_e0a2ec0a-dbe6-47f3-a625-88dd9b56901b.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "c2c9ae96-ebe1-44b7-a892-9c5ac7a77277": {
           "type": "column",
           "disabled": true,
           "settings": {
@@ -405,7 +455,12 @@
         "16607590664028530a-0",
         "16607590664028530a-1",
         "16607590664028530a-2",
-        "26aa5f65-69c6-480b-9905-5cf1365baf9e"
+        "26aa5f65-69c6-480b-9905-5cf1365baf9e",
+        "f934b3e7-d2af-4828-9f79-cf32b1e47ba8",
+        "a5b8f81f-300b-4019-bc78-97d301a03503",
+        "f932b63a-777a-403d-9960-e64345af7d06",
+        "9fbd18df-df75-465d-889b-4a2766d00f4f",
+        "c2c9ae96-ebe1-44b7-a892-9c5ac7a77277"
       ],
       "settings": {
         "title": "AS SEEN ON",
