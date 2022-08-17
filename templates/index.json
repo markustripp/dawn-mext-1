@@ -284,17 +284,25 @@
     "1660758993f3d6b9e6": {
       "type": "image-with-text",
       "blocks": {
+        "56c5abf4-c54d-4714-919f-5c4250b17edf": {
+          "type": "caption",
+          "settings": {
+            "caption": "HEY YOU! WANNA TEAM UP?",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
         "166075899324c06463-0": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "BECOME AN AMBASSADOR!",
             "heading_size": "h1"
           }
         },
         "166075899324c06463-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Join the GP team as an ambassador and we’ll set you up with a unique discount code to share with your friends, fam, followers and former lovers and earn <strong>10% commission <\/strong>on all orders placed using your code. Spread the love 💕 ...make some cash 💵 …Come join the Gumball Poodle Party 🧦 🎉 !<\/p>",
             "text_style": "body"
           }
         },
@@ -307,11 +315,13 @@
         }
       },
       "block_order": [
+        "56c5abf4-c54d-4714-919f-5c4250b17edf",
         "166075899324c06463-0",
         "166075899324c06463-1",
         "166075899324c06463-2"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/widget.gif",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
