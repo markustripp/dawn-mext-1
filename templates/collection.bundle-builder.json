@@ -11,7 +11,7 @@
     "product-grid": {
       "type": "main-collection-product-grid",
       "settings": {
-        "products_per_page": 16,
+        "products_per_page": 24,
         "image_ratio": "adapt",
         "show_secondary_image": true,
         "add_image_padding": false,
@@ -22,10 +22,27 @@
         "enable_sorting": true,
         "collapse_on_larger_devices": false
       }
+    },
+    "16607641414f1e9643": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "collection": "all-socks",
+        "products_to_show": 12,
+        "show_view_all": true,
+        "swipe_on_mobile": true,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "add_image_padding": false,
+        "show_image_outline": false,
+        "show_vendor": false,
+        "show_rating": false
+      }
     }
   },
   "order": [
     "banner",
-    "product-grid"
+    "product-grid",
+    "16607641414f1e9643"
   ]
 }
