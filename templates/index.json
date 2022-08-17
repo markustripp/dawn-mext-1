@@ -5,6 +5,7 @@
       "blocks": {
         "heading": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Talk about your brand",
             "heading_size": "medium"
@@ -12,6 +13,7 @@
         },
         "button": {
           "type": "buttons",
+          "disabled": true,
           "settings": {
             "button_label_1": "Shop all",
             "button_link_1": "shopify:\/\/collections\/all",
@@ -39,19 +41,34 @@
         "show_text_below": true
       }
     },
+    "featured_products": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "OUR NEWEST STYLES",
+        "collection": "all",
+        "products_to_show": 4,
+        "show_view_all": true,
+        "swipe_on_mobile": false,
+        "image_ratio": "square",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    },
     "1641301196c0c248f5": {
       "type": "image-carousel",
+      "disabled": true,
       "blocks": {
         "1264ec74-2c5d-4b67-8b7e-73ec484fd5ed": {
           "type": "images",
           "settings": {
-            "image": "shopify:\/\/shop_images\/kai-pilger-7YwWjgS7aJs-unsplash.jpg"
           }
         },
         "e07eaf16-7469-4ff7-a42a-b3acce270d06": {
           "type": "images",
           "settings": {
-            "image": "shopify:\/\/shop_images\/david-dvoracek-12P0_rzSNpM-unsplash.jpg"
           }
         }
       },
@@ -99,22 +116,6 @@
       "settings": {
         "color_scheme": "background-1",
         "full_width": true
-      }
-    },
-    "featured_products": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
-        "collection": "all",
-        "products_to_show": 4,
-        "show_view_all": true,
-        "swipe_on_mobile": false,
-        "image_ratio": "square",
-        "show_secondary_image": false,
-        "add_image_padding": false,
-        "show_image_outline": true,
-        "show_vendor": false,
-        "show_rating": false
       }
     },
     "collage": {
@@ -216,9 +217,9 @@
   },
   "order": [
     "image_banner",
+    "featured_products",
     "1641301196c0c248f5",
     "rich_text",
-    "featured_products",
     "collage",
     "video",
     "multi_column"
