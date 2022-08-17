@@ -2,6 +2,7 @@
   "sections": {
     "1660766384e0ab106a": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "YOU ARE $12.95 AWAY FROM FREE SHIPPING!"
       }
@@ -40,7 +41,7 @@
         "166076727314b8b445-0": {
           "type": "heading",
           "settings": {
-            "heading": "WE THINK YOU'LL LOVE THESE!",
+            "heading": "Add $12 more to earn FREE SHIPPING! We think you'll love these...",
             "heading_size": "h1"
           }
         }
@@ -58,6 +59,7 @@
       "blocks": {
         "166076649384801554-0": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "{{ section.settings.product.vendor }}",
             "text_style": "uppercase"
@@ -96,7 +98,7 @@
         "166076649384801554-6": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true
+            "show_dynamic_checkout": false
           }
         },
         "166076649384801554-7": {
