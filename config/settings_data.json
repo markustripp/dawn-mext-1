@@ -101,7 +101,15 @@
     },
     "content_for_index": [
 
-    ]
+    ],
+    "blocks": {
+      "10261849759452303822": {
+        "type": "shopify:\/\/apps\/change-commerce\/blocks\/app-embed-block\/7b6c2cd4-8962-4dc6-975b-870e1f567789",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
   },
   "presets": {
     "Default": {
