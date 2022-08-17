@@ -223,6 +223,7 @@
         "166075892566c3d966-0": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/divine.gif",
             "heading": "",
             "heading_size": "medium",
             "subheading": "",
@@ -255,7 +256,7 @@
       "type": "featured-collection",
       "settings": {
         "title": "BUTT STUFF",
-        "collection": "",
+        "collection": "butt-stuff",
         "products_to_show": 4,
         "show_view_all": true,
         "swipe_on_mobile": false,
