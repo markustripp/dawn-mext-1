@@ -58,37 +58,47 @@
         "show_rating": false
       }
     },
-    "1660758718b193aeb0": {
+    "1660758993f3d6b9e6": {
       "type": "image-with-text",
       "blocks": {
-        "1660758718267bc75d-0": {
+        "56c5abf4-c54d-4714-919f-5c4250b17edf": {
+          "type": "caption",
+          "settings": {
+            "caption": "HEY YOU! WANNA TEAM UP?",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "166075899324c06463-0": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "BECOME AN AMBASSADOR!",
             "heading_size": "h1"
           }
         },
-        "1660758718267bc75d-1": {
+        "166075899324c06463-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Join the GP team as an ambassador and we’ll set you up with a unique discount code to share with your friends, fam, followers and former lovers and earn <strong>10% commission <\/strong>on all orders placed using your code. Spread the love 💕 ...make some cash 💵 …Come join the Gumball Poodle Party 🧦 🎉 !<\/p>",
             "text_style": "body"
           }
         },
-        "1660758718267bc75d-2": {
+        "166075899324c06463-2": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": ""
+            "button_label": "LEARN HOW",
+            "button_link": "https:\/\/join.collabs.shopify.com\/community\/apply\/tLpoWnNrlFk"
           }
         }
       },
       "block_order": [
-        "1660758718267bc75d-0",
-        "1660758718267bc75d-1",
-        "1660758718267bc75d-2"
+        "56c5abf4-c54d-4714-919f-5c4250b17edf",
+        "166075899324c06463-0",
+        "166075899324c06463-1",
+        "166075899324c06463-2"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/widget.gif",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -99,47 +109,13 @@
         "mobile_content_alignment": "left"
       }
     },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        },
-        "button": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
-      "settings": {
-        "color_scheme": "background-1",
-        "full_width": true
-      }
-    },
     "16607588025304ad07": {
       "type": "slideshow",
       "blocks": {
         "1660758802f35cbbdf-0": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/2desktop_full_2x_266712e2-f1b9-4562-b203-d182ffc7395f.png",
             "heading": "",
             "heading_size": "medium",
             "subheading": "",
@@ -150,7 +126,7 @@
             "show_text_box": true,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
+            "color_scheme": "background-2",
             "text_alignment_mobile": "center"
           }
         }
@@ -193,34 +169,44 @@
     "166075891041478f50": {
       "type": "image-with-text",
       "blocks": {
+        "2de9632f-49e7-4feb-a441-483eee9644e9": {
+          "type": "caption",
+          "settings": {
+            "caption": "FEATURED COLLECTION",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
         "1660758909ce8ec6e8-0": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "FART STUFF!",
             "heading_size": "h1"
           }
         },
         "1660758909ce8ec6e8-1": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>SBD's, squeakers, quackers, rumblers, long ones, short ones, surprise ones, suppressed ones... whatever you call them, we've got you covered.<\/p>",
             "text_style": "body"
           }
         },
         "1660758909ce8ec6e8-2": {
           "type": "button",
           "settings": {
-            "button_label": "Button label",
-            "button_link": ""
+            "button_label": "SHOP NOW",
+            "button_link": "shopify:\/\/collections\/butt-stuff"
           }
         }
       },
       "block_order": [
+        "2de9632f-49e7-4feb-a441-483eee9644e9",
         "1660758909ce8ec6e8-0",
         "1660758909ce8ec6e8-1",
         "1660758909ce8ec6e8-2"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/fart-tile.gif-white_b4e50482-4bc4-4431-a078-631257bd4c2d.gif",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -281,57 +267,6 @@
         "show_rating": false
       }
     },
-    "1660758993f3d6b9e6": {
-      "type": "image-with-text",
-      "blocks": {
-        "56c5abf4-c54d-4714-919f-5c4250b17edf": {
-          "type": "caption",
-          "settings": {
-            "caption": "HEY YOU! WANNA TEAM UP?",
-            "text_style": "caption-with-letter-spacing",
-            "text_size": "medium"
-          }
-        },
-        "166075899324c06463-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "BECOME AN AMBASSADOR!",
-            "heading_size": "h1"
-          }
-        },
-        "166075899324c06463-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Join the GP team as an ambassador and we’ll set you up with a unique discount code to share with your friends, fam, followers and former lovers and earn <strong>10% commission <\/strong>on all orders placed using your code. Spread the love 💕 ...make some cash 💵 …Come join the Gumball Poodle Party 🧦 🎉 !<\/p>",
-            "text_style": "body"
-          }
-        },
-        "166075899324c06463-2": {
-          "type": "button",
-          "settings": {
-            "button_label": "LEARN HOW",
-            "button_link": "https:\/\/join.collabs.shopify.com\/community\/apply\/tLpoWnNrlFk"
-          }
-        }
-      },
-      "block_order": [
-        "56c5abf4-c54d-4714-919f-5c4250b17edf",
-        "166075899324c06463-0",
-        "166075899324c06463-1",
-        "166075899324c06463-2"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/widget.gif",
-        "height": "adapt",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "left"
-      }
-    },
     "16607590038db6fcfc": {
       "type": "apps",
       "blocks": {
@@ -362,6 +297,47 @@
         "show_image_outline": true,
         "show_vendor": false,
         "show_rating": false
+      }
+    },
+    "1660758718b193aeb0": {
+      "type": "image-with-text",
+      "blocks": {
+        "1660758718267bc75d-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Image with text",
+            "heading_size": "h1"
+          }
+        },
+        "1660758718267bc75d-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text_style": "body"
+          }
+        },
+        "1660758718267bc75d-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "1660758718267bc75d-0",
+        "1660758718267bc75d-1",
+        "1660758718267bc75d-2"
+      ],
+      "settings": {
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "left"
       }
     },
     "16607590660047f222": {
@@ -443,17 +419,16 @@
   "order": [
     "image_banner",
     "featured_products",
-    "1660758718b193aeb0",
-    "rich_text",
+    "1660758993f3d6b9e6",
     "16607588025304ad07",
     "16607588504ef03feb",
     "166075888494baaec7",
     "166075891041478f50",
     "16607589256ae7078c",
     "16607589592e5ec82a",
-    "1660758993f3d6b9e6",
     "16607590038db6fcfc",
     "1660759019dae47df3",
+    "1660758718b193aeb0",
     "16607590660047f222",
     "16607591887a4795da"
   ]
