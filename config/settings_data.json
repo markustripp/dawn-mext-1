@@ -12,6 +12,9 @@
     "sale_badge_color_scheme": "background-2",
     "accent_icons": "accent-2",
     "page_width": "1200",
+    "social_facebook_link": "https:\/\/www.facebook.com\/GumballPoodle\/",
+    "social_instagram_link": "https:\/\/www.instagram.com\/gumballpoodle\/",
+    "social_tiktok_link": "https:\/\/www.tiktok.com\/@shopgumballpoodle",
     "checkout_accent_color": "#ff00cc",
     "checkout_button_color": "#ff00cc",
     "sections": {
@@ -54,18 +57,10 @@
               "heading": "Quick links",
               "menu": "footer"
             }
-          },
-          "footer-1": {
-            "type": "text",
-            "settings": {
-              "heading": "Heading",
-              "subtext": "<p>Share store details, promotions, or brand content with your customers.<\/p>"
-            }
           }
         },
         "block_order": [
-          "footer-0",
-          "footer-1"
+          "footer-0"
         ],
         "settings": {
           "color_scheme": "background-1",
