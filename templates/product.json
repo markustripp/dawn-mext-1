@@ -48,10 +48,11 @@
             "share_label": "Share"
           }
         },
-        "f643472a-e379-4c3e-bd30-fd32b7ca6530": {
-          "type": "custom_liquid",
+        "e5ef5c11-e332-4fc1-80a4-2dafc1795ef7": {
+          "type": "text",
           "settings": {
-            "custom_liquid": "SOCK SPECS:"
+            "text": "Sock Specs:",
+            "text_style": "body"
           }
         }
       },
@@ -64,7 +65,7 @@
         "buy_buttons",
         "description",
         "share",
-        "f643472a-e379-4c3e-bd30-fd32b7ca6530"
+        "e5ef5c11-e332-4fc1-80a4-2dafc1795ef7"
       ],
       "settings": {
         "enable_sticky_info": true,
