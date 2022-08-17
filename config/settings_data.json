@@ -29,10 +29,20 @@
               "color_scheme": "accent-2",
               "link": ""
             }
+          },
+          "677ba314-9626-40c3-897e-6f5bc24f1513": {
+            "type": "announcement",
+            "disabled": true,
+            "settings": {
+              "text": "Welcome to our store",
+              "color_scheme": "accent-1",
+              "link": ""
+            }
           }
         },
         "block_order": [
-          "announcement-bar-0"
+          "announcement-bar-0",
+          "677ba314-9626-40c3-897e-6f5bc24f1513"
         ],
         "settings": {
         }
