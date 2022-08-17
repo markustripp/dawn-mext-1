@@ -21,8 +21,8 @@
           "announcement-bar-0": {
             "type": "announcement",
             "settings": {
-              "text": "Welcome to our store",
-              "color_scheme": "background-1",
+              "text": "Free Shipping on Orders Over $50",
+              "color_scheme": "accent-1",
               "link": ""
             }
           }
