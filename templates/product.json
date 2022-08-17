@@ -48,11 +48,13 @@
             "share_label": "Share"
           }
         },
-        "e5ef5c11-e332-4fc1-80a4-2dafc1795ef7": {
-          "type": "text",
+        "ba962ccd-4b4d-4cf0-8b9f-b7eb7cc61b00": {
+          "type": "collapsible_tab",
           "settings": {
-            "text": "Sock Specs:",
-            "text_style": "body"
+            "heading": "Sock Specs:",
+            "content": "<p>{{ product.metafields.descriptors.care_guide | metafield_tag }}<\/p>",
+            "page": "",
+            "icon": "none"
           }
         }
       },
@@ -65,7 +67,7 @@
         "buy_buttons",
         "description",
         "share",
-        "e5ef5c11-e332-4fc1-80a4-2dafc1795ef7"
+        "ba962ccd-4b4d-4cf0-8b9f-b7eb7cc61b00"
       ],
       "settings": {
         "enable_sticky_info": true,
