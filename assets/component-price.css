@@ -63,6 +63,8 @@
 }
 
 .price--on-sale .price__sale {
+  color: #FF00CC;
+  font-size: 16px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
