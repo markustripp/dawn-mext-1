@@ -31,7 +31,7 @@ slideshow-component .slideshow.banner {
   flex-direction: row;
   flex-wrap: nowrap;
   margin: 0;
-  @apply xbg-red-600;
+  @apply bg-red-600;
 }
 
 .slideshow__slide {
