@@ -12,6 +12,40 @@
     "settings": [
       {
         "type": "header",
+        "content": "Custom Colors"
+      },
+      {
+        "type": "color",
+        "id": "custom-color-1",
+        "default": "#FFFFFF",
+        "label": "Custom Color 1"
+      },
+      {
+        "type": "color",
+        "id": "custom-color-2",
+        "default": "#FFFFFF",
+        "label": "Custom Color 2"
+      },
+      {
+        "type": "color",
+        "id": "custom-color-3",
+        "default": "#FFFFFF",
+        "label": "Custom Color 3"
+      },
+      {
+        "type": "color",
+        "id": "custom-color-4",
+        "default": "#FFFFFF",
+        "label": "Custom Color 4"
+      },
+      {
+        "type": "color",
+        "id": "custom-color-5",
+        "default": "#FFFFFF",
+        "label": "Custom Color 5"
+      },
+      {
+        "type": "header",
         "content": "t:settings_schema.colors.settings.header__1.content"
       },
       {
