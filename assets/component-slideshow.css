@@ -32,7 +32,6 @@ slideshow-component .slideshow.banner {
   flex-wrap: nowrap;
   margin: 0;
   @apply bg-red-500;
-  background-color: red;
 }
 
 .slideshow__slide {
