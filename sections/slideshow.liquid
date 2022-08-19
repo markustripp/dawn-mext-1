@@ -40,7 +40,7 @@
           opacity: {{ block.settings.image_overlay_opacity | divided_by: 100.0 }};
         }
       </style>
-      <div class="slideshow__slide grid__item grid--1-col slider__slide"
+      <div class="xrelative slideshow__slide grid__item grid--1-col slider__slide"
         id="Slide-{{ section.id }}-{{ forloop.index }}"
         {{ block.shopify_attributes }}
         role="group"
@@ -50,6 +50,24 @@
       >
         <div class="slideshow__media banner__media media{% if block.settings.image == blank %} placeholder{% endif %}">
           {%- if block.settings.image -%}
+          <div class="xrelative">
+            <!-- scallops top -->
+            {% if section.settings.scallop_border_top == true %}
+              <div class="xflex xabsolute xtop-0 xleft-0">
+                <div class="xw-screen h-3/4">
+                  <div style="background-image: url('../assets/scallop.png');" class="xbg-repeat-x xw-full xbg-contain">.</div>
+                </div>
+              </div>
+            {% endif %}
+              <!-- scallops bottom -->
+            {% if section.settings.scallop_border_bottom == true %}
+              <div class="xflex xabsolute xbottom-0 xleft-0 xrotate-180">
+                <div class="xw-screen h-3/4">
+                  <div style="background-image: url('../assets/scallop.png');" class="xbg-repeat-x xw-full xbg-contain">.</div>
+                </div>
+              </div>
+            {% endif %}
+            <!-- slideshow image -->
             <img
               srcset="{%- if block.settings.image.width >= 375 -%}{{ block.settings.image | img_url: '375x' }} 375w,{%- endif -%}
               {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | img_url: '550x' }} 550w,{%- endif -%}
@@ -68,30 +86,17 @@
               width="{{ block.settings.image.width }}"
               height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio | round }}"
             >
+          </div>
           {%- else -%}
             {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
         </div>
         
-        <!-- Button Box -->
-        <div class="slideshow__text-wrapper banner__content banner__content--{{ block.settings.box_align }} page-width{% if block.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
-          <div class="slideshow__text banner__box color-{{ block.settings.color_scheme }} slideshow__text--{{ block.settings.text_alignment }} slideshow__text-mobile--{{ block.settings.text_alignment_mobile }}">
-            {%- if block.settings.heading != blank -%}
-              <h2 class="banner__heading{% if block.settings.heading_size == 'medium' %} h1{% elsif block.settings.heading_size == 'large' %} h0{% endif %}">{{ block.settings.heading | escape }}</h2>
-            {%- endif -%}
-            {%- if block.settings.subheading != blank -%}
-              <div class="banner__text" {{ block.shopify_attributes }}>
-                <span>{{ block.settings.subheading | escape }}</span>
-              </div>
-            {%- endif -%}
-            {%- if block.settings.button_label != blank -%}
-              <div class="banner__buttons">
-                <a{% if block.settings.link %} href="{{ block.settings.link }}"{% else %} role="link" aria-disabled="true"{% endif %} class="button {% if block.settings.button_style_secondary %}button--secondary{% else %}button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
-              </div>
-            {%- endif -%}
-          </div>
-        </div>
-        <!-- End Box -->
+        <!-- Link -->
+        <a 
+          href="{{ block.settings.link }}" 
+          class="xabsolute xinset-0 xz-50 xw-full xh-full xbg-red-500 xbg-opacity-0">
+        </a>
       </div>
     {%- endfor -%}
   </div>
@@ -165,6 +170,18 @@
       ],
       "default": "full_bleed",
       "label": "t:sections.slideshow.settings.layout.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "scallop_border_top",
+      "label": "Scalloped Border Top",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "scallop_border_bottom",
+      "label": "Scalloped Border Bottom",
+      "default": false
     },
     {
       "type": "select",
