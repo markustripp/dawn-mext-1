@@ -85,7 +85,7 @@
         {%- endif -%}
         
         <!-- scallops top -->
-        {% if section.settings.scallop_border_top %}
+        {% if section.settings.scallop_border_top == true %}
         <div class="xflex xabsolute xtop-0 xleft-0">
           <div class="xw-screen h-3/4">
             <div style="background-image: url('../assets/scallop.png');" class="xbg-repeat-x xw-full xbg-contain">.</div>
@@ -93,7 +93,7 @@
         </div>
           {% endif %}
           <!-- scallops bottom -->
-          {% if section.settings.scallop_border_bottom %}
+          {% if section.settings.scallop_border_bottom == true %}
           <div class="xflex xabsolute xbottom-0 xleft-0 xrotate-180">
             <div class="xw-screen h-3/4">
               <div style="background-image: url('../assets/scallop.png');" class="xbg-repeat-x xw-full xbg-contain">.</div>
@@ -137,13 +137,13 @@
     },
     {
       "type": "checkbox",
-      "id": "scallop-border-top",
+      "id": "scallop_border_top",
       "label": "Scalloped Border Top",
       "default": false
     },
     {
       "type": "checkbox",
-      "id": "scallop-border-bottom",
+      "id": "scallop_border_bottom",
       "label": "Scalloped Border Bottom",
       "default": false
     },
