@@ -30,9 +30,10 @@
 {%- endstyle -%}
 
 {% if section.settings.site_link != blank %}
-<a href="{{ section.settings.site_link }}">
+  <a href="{{ section.settings.site_link }}">
 {% endif %}
-  <div id="Banner-{{ section.id }}" class="{{ section.settings.border }} xborder-black banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
+  <div id="Banner-{{ section.id }}" class="xrelative {{ section.settings.border }} xborder-black banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.adapt_height_first_image and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}">
+
     {%- if section.settings.image != blank -%}
       <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}">
         <img
@@ -79,14 +80,30 @@
           width="{{ section.settings.image_2.width }}"
           height="{{ section.settings.image_2.width | divided_by: section.settings.image_2.aspect_ratio }}"
           {% if section.settings.image != blank %}class="banner__media-image-half"{% endif %}
-        >
-      </div>
-    {%- endif -%}
-   
-  </div>
-{% if section.settings.site_link != blank %}
-</a>
-{% endif %}
+          >
+        </div>
+        {%- endif -%}
+        
+        <!-- scallops top -->
+        {% if section.settings.scallop_border_top %}
+        <div class="xflex xabsolute xtop-0 xleft-0">
+          <div class="xw-screen h-3/4">
+            <div style="background-image: url('../assets/scallop.png');" class="xbg-repeat-x xw-full xbg-contain">.</div>
+          </div>
+        </div>
+          {% endif %}
+          <!-- scallops bottom -->
+          {% if section.settings.scallop_border_bottom %}
+          <div class="xflex xabsolute xbottom-0 xleft-0 xrotate-180">
+            <div class="xw-screen h-3/4">
+              <div style="background-image: url('../assets/scallop.png');" class="xbg-repeat-x xw-full xbg-contain">.</div>
+            </div>
+          </div>
+          {% endif %}
+    </div>
+  {% if section.settings.site_link != blank %}
+    </a>
+  {% endif %}
 
 {% schema %}
 {
@@ -98,7 +115,12 @@
       "type": "select",
       "id": "border",
       "label": "Border",
+     "default": "",
       "options": [
+        {
+          "value": "",
+          "label": "No border"
+        },
         {
           "value": "xborder-t-2",
           "label": "Top Flat"
@@ -112,6 +134,18 @@
           "label": "Top & Bottom Flat"
         }
       ]
+    },
+    {
+      "type": "checkbox",
+      "id": "scallop-border-top",
+      "label": "Scalloped Border Top",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "scallop-border-bottom",
+      "label": "Scalloped Border Bottom",
+      "default": false
     },
     {
       "type": "image_picker",
