@@ -619,6 +619,16 @@ video {
   margin-right: auto;
 }
 
+.xmy-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.xmx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .xmt-8 {
   margin-top: 2rem;
 }
@@ -629,6 +639,10 @@ video {
 
 .xflex {
   display: flex;
+}
+
+.xgrid {
+  display: grid;
 }
 
 .xh-full {
@@ -689,6 +703,10 @@ video {
   max-width: 37px;
 }
 
+.xmax-w-6xl {
+  max-width: 72rem;
+}
+
 .xtranslate-y-8 {
   --tw-translate-y: 2rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -712,6 +730,22 @@ video {
 
 .xtransform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.xgrid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.xgrid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.xgrid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.xgrid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .xflex-col {
@@ -738,10 +772,26 @@ video {
   gap: 1.25rem;
 }
 
+.xgap-4 {
+  gap: 1rem;
+}
+
 .xspace-x-5 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.25rem * var(--tw-space-x-reverse));
   margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.xrounded-lg {
+  border-radius: 0.5rem;
+}
+
+.xrounded-3xl {
+  border-radius: 1.5rem;
+}
+
+.xborder-2 {
+  border-width: 2px;
 }
 
 .xborder-y-2 {
@@ -819,6 +869,10 @@ video {
   padding: 15rem;
 }
 
+.xp-5 {
+  padding: 1.25rem;
+}
+
 .xpx-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -832,6 +886,26 @@ video {
 .xpy-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.xpy-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.xpx-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.xpy-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.xpy-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .xfont-heading {
@@ -883,4 +957,21 @@ video {
 
 .xgroup:hover .group-hover\:xopacity-100 {
   opacity: 1;
+}
+
+@media (min-width: 750px) {
+  .md\:xgrid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 990px) {
+  .lg\:xgrid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .lg\:xpy-8 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
