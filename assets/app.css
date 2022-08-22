@@ -574,20 +574,20 @@ video {
   left: 0px;
 }
 
-.xright-0 {
-  right: 0px;
+.xbottom-0 {
+  bottom: 0px;
 }
 
-.xbottom-1 {
-  bottom: 0.25rem;
+.xright-0 {
+  right: 0px;
 }
 
 .xbottom-1\/4 {
   bottom: 25%;
 }
 
-.xbottom-0 {
-  bottom: 0px;
+.xbottom-1 {
+  bottom: 0.25rem;
 }
 
 .xtop-full {
@@ -608,10 +608,6 @@ video {
 
 .xz-50 {
   z-index: 50;
-}
-
-.xz-\[5000\] {
-  z-index: 5000;
 }
 
 .xmx-auto {
@@ -657,12 +653,12 @@ video {
   height: 13rem;
 }
 
-.xmax-h-\[37px\] {
-  max-height: 37px;
-}
-
 .xmax-h-20 {
   max-height: 5rem;
+}
+
+.xw-screen {
+  width: 100vw;
 }
 
 .xw-full {
@@ -673,12 +669,12 @@ video {
   width: 5rem;
 }
 
-.xw-1 {
-  width: 0.25rem;
-}
-
 .xw-1\/2 {
   width: 50%;
+}
+
+.xw-1 {
+  width: 0.25rem;
 }
 
 .xw-fit {
@@ -687,20 +683,8 @@ video {
   width: fit-content;
 }
 
-.xw-\[62px\] {
-  width: 62px;
-}
-
-.xw-screen {
-  width: 100vw;
-}
-
 .xw-52 {
   width: 13rem;
-}
-
-.xmax-w-\[37px\] {
-  max-width: 37px;
 }
 
 .xmax-w-6xl {
@@ -736,16 +720,16 @@ video {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.xgrid-cols-3 {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .xgrid-cols-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .xgrid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.xgrid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .xflex-col {
@@ -764,10 +748,6 @@ video {
   justify-content: space-between;
 }
 
-.xgap-2 {
-  gap: 0.5rem;
-}
-
 .xgap-5 {
   gap: 1.25rem;
 }
@@ -776,18 +756,22 @@ video {
   gap: 1rem;
 }
 
+.xgap-2 {
+  gap: 0.5rem;
+}
+
 .xspace-x-5 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.25rem * var(--tw-space-x-reverse));
   margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.xrounded-lg {
-  border-radius: 0.5rem;
-}
-
 .xrounded-3xl {
   border-radius: 1.5rem;
+}
+
+.xrounded-lg {
+  border-radius: 0.5rem;
 }
 
 .xborder-2 {
@@ -803,12 +787,12 @@ video {
   border-bottom-width: 2px;
 }
 
-.xborder-r-2 {
-  border-right-width: 2px;
-}
-
 .xborder-t-2 {
   border-top-width: 2px;
+}
+
+.xborder-r-2 {
+  border-right-width: 2px;
 }
 
 .xborder-black {
@@ -821,19 +805,9 @@ video {
   border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
-.xbg-red-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-
 .xbg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.xbg-red-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
 
 .xbg-red-500 {
@@ -841,36 +815,38 @@ video {
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
+.xbg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
+.xbg-red-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
+}
+
 .xbg-opacity-0 {
   --tw-bg-opacity: 0;
-}
-
-.xbg-\[url\(\.\.\/assets\/scallop\.png\)\] {
-  background-image: url(../assets/scallop.png);
-}
-
-.xbg-\[url\(\'\.\.\/assets\/scallop\.png\'\)\] {
-  background-image: url('../assets/scallop.png');
-}
-
-.xbg-cover {
-  background-size: cover;
 }
 
 .xbg-contain {
   background-size: contain;
 }
 
+.xbg-cover {
+  background-size: cover;
+}
+
 .xbg-repeat-x {
   background-repeat: repeat-x;
 }
 
-.xp-60 {
-  padding: 15rem;
-}
-
 .xp-5 {
   padding: 1.25rem;
+}
+
+.xp-60 {
+  padding: 15rem;
 }
 
 .xpx-5 {
