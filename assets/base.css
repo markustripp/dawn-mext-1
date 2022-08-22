@@ -442,6 +442,7 @@ h6,
 
 .white-text-black-stroke {
   text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000;
+  color: white !important;
 }
 
 .shadow-border {

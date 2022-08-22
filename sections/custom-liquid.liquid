@@ -1,7 +1,7 @@
-<div style="background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};" class="xw-full xrelative xpy-52">
+<div style="background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }}; margin-top: -{{ section.settings.position }}px;" class="xw-full xrelative xpy-52 xoverflow-x-hidden">
   <div class="xmax-w-[1100px] xmx-auto {% if text_border == true %}white-text-black-stroke{% endif %}">
-    <div>
-      <h2>{{ section.settings.title }}</h2>
+    <div class="xpy-4">
+      <span class="white-text-black-stroke xtext-5xl">{{ section.settings.title }}</span>
     </div>
     {% if section.settings.caption != blank %}
        <div class="xflex xitems-center xspace-x-4">
@@ -11,6 +11,26 @@
       </p>
     </div>
     {% endif %}
+
+    <div class="xpy-20">
+      <div class="xflex xspace-x-6">
+        <div class="xw-[280px] xh-[498px] shadow-border xoverflow-hidden xflex-shrink-0">
+          <img src="https://images.pexels.com/photos/7335439/pexels-photo-7335439.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="xw-full xh-full xobject-cover xobject-center hover:xscale-125 hover:xrotate-6 xtransition-transform xduration-1000 xease-in-out">
+        </div>
+        <div class="xw-[280px] xh-[498px] shadow-border xoverflow-hidden xflex-shrink-0">
+          <img src="https://images.pexels.com/photos/7335439/pexels-photo-7335439.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="xw-full xh-full xobject-cover xobject-center hover:xscale-125 hover:xrotate-6 xtransition-transform xduration-1000 xease-in-out">
+        </div>
+        <div class="xw-[280px] xh-[498px] shadow-border xoverflow-hidden xflex-shrink-0">
+          <img src="https://images.pexels.com/photos/7335439/pexels-photo-7335439.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="xw-full xh-full xobject-cover xobject-center hover:xscale-125 hover:xrotate-6 xtransition-transform xduration-1000 xease-in-out">
+        </div>
+        <div class="xw-[280px] xh-[498px] shadow-border xoverflow-hidden xflex-shrink-0">
+          <img src="https://images.pexels.com/photos/7335439/pexels-photo-7335439.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="xw-full xh-full xobject-cover xobject-center hover:xscale-125 hover:xrotate-6 xtransition-transform xduration-1000 xease-in-out">
+        </div>
+        <div class="xw-[280px] xh-[498px] shadow-border xoverflow-hidden xflex-shrink-0">
+          <img src="https://images.pexels.com/photos/7335439/pexels-photo-7335439.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="xw-full xh-full xobject-cover xobject-center hover:xscale-125 hover:xrotate-6 xtransition-transform xduration-1000 xease-in-out">
+        </div>
+      </div>
+    </div>
    
     <!-- button -->
     <div class="xflex xitems-center xjustify-between">
@@ -21,13 +41,9 @@
   </div>
 
   <!-- scallops top -->
-  {% if section.settings.scallop_border_top == true %}
     {% render 'border-scallop-top' %}
-  {% endif %}
-  <!-- scallops bottom -->
-  {% if section.settings.scallop_border_bottom == true %}
+    <!-- scallops bottom -->
     {% render 'border-scallop-bottom' %}
-  {% endif %}
 </div>
 
 {% schema %}
@@ -63,6 +79,15 @@
       "id": "scallop_border_bottom",
       "label": "Scalloped Border Bottom",
       "default": true
+    },
+    {
+      "type": "range",
+      "id": "position",
+      "label": "Card Position",
+      "min": 0,
+      "max": 300,
+      "step": 5,
+      "default": 0
     },
     {
       "type": "header",

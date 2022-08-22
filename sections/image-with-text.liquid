@@ -1,9 +1,9 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
 
 <div class="xmy-2 image-with-text {% if section.settings.full_width %}image-with-text--full-width{% else %}page-width{% endif %} image-with-text--{{ section.settings.content_layout }} color-scheme-{{ section.settings.color_scheme }}">
-  <div class="{% if section.settings.border_card == true %}shadow-border{% endif %}image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}{% if section.settings.content_layout == 'no-overlap' %} gradient color-{{ section.settings.color_scheme }}{% endif %}">
+  <div class="{% if section.settings.border_card == true %}shadow-border {% endif %}image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}{% if section.settings.content_layout == 'no-overlap' %} gradient color-{{ section.settings.color_scheme }}{% endif %}">
     <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
-      <div class="image-with-text__media image-with-text__media--{{ section.settings.height }} {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %} {% if section.settings.border_image == true %}shadow-border xoverflow-hidden{% endif %}"
+      <div class="image-with-text__media image-with-text__media--{{ section.settings.height }} {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %} {% if section.settings.border_image == true %} shadow-border xoverflow-hidden{% endif %}"
         {% if section.settings.height == 'adapt' and section.settings.image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"{% endif %}
       >
         {%- if section.settings.image != blank -%}
@@ -34,7 +34,7 @@
             {%- when 'heading' -%}
               
               <div class="xflex xw-full">
-                <h2 class="xw-full image-with-text__heading {{ block.settings.heading_size }} lg:xmr-6" {{ block.shopify_attributes }}>
+                <h2 class="xw-full {{ block.settings.heading_size }} lg:xmr-6 {% if block.settings.stroke == true %}white-text-black-stroke{% endif %}" {{ block.shopify_attributes }}>
                   {{ block.settings.heading | escape }}
                 </h2>
                 {% if block.settings.header_image != blank %}
@@ -291,6 +291,12 @@
           ],
           "default": "h1",
           "label": "t:sections.image-with-text.blocks.heading.settings.heading_size.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "stroke",
+          "label": "Add stroke to heading",
+          "default": false
         },
         {
           "type": "image_picker",
