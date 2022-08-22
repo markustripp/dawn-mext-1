@@ -440,6 +440,16 @@ h6,
   margin-block-end: 1.67em;
 }
 
+.white-text-black-stroke {
+  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000;
+}
+
+.shadow-border {
+  box-shadow: black 3px 3px 0 0;
+  border: black 3px solid;
+  border-radius: 24px;
+}
+
 blockquote {
   font-style: italic;
   color: rgba(var(--color-foreground), 0.75);
@@ -1210,10 +1220,8 @@ deferred-media {
   color: rgb(var(--color-button-text));
   min-width: 12rem;
   min-height: 4.5rem;
-  transition: box-shadow var(--duration-short) ease;
   -webkit-appearance: none;
   appearance: none;
-  transition: padding 0.2s ease-in-out;
 }
 
 .button:focus-visible {
@@ -1260,11 +1268,10 @@ deferred-media {
 
 /* Button - hover */
 
-.button:not([disabled]):hover,
+/* .button:not([disabled]):hover,
 .shopify-challenge__button:hover,
 .customer button:hover {
-  padding-right: 80px;
-}
+} */
 
 /* Button - other */
 

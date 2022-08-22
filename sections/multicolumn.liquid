@@ -1,20 +1,36 @@
-<div style="background-color: {{ section.settings.bg_color }};" class="xrelative">
-  <div class="xmax-w-6xl xmx-auto">
-    <div class="xpy-10 sm:xpy-32 xpx-4">
-      <div>
-        <h3 class="xpy-4 lg:xpy-8 xtext-white">{{ section.settings.title }}</h3>
+<div style="background-color: {{ section.settings.bg_color }};" class="xrelative xpt-24 xpb-52 xpx-8">
+  <div class="xmax-w-[1260px] xmx-auto">
+    <div>
+      <h3 class="xtext-white lg:xpy-4 white-text-black-stroke">{{ section.settings.title }}</h3>
+    </div>
+    <div class="xpt-20 xpx-8">
+      <div class="xgrid xgrid-cols-2 md:xgrid-cols-3 lg:xgrid-cols-4 xl:xgrid-cols-5 xgap-24">
+        {% if section.blocks.size > 0 %}
+          {% for block in section.blocks %}
+            <div class="xflex xitems-center xjustify-center xbg-white xaspect-square shadow-border">
+              <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}" class="xp-5">            
+            </div>
+          {% endfor %}
+        {% endif %}
       </div>
-      	<div class="xgrid xgrid-cols-2 sm:xgrid-cols-3 md:xgrid-cols-4 lg:xgrid-cols-5 xgap-4 sm:xgap-8">
-          {% if section.blocks.size > 0 %}
-            {% for block in section.blocks %}
-              <div class="xbg-white xrounded-3xl xborder-2 xborder-black xp-5">
-                <img src="{{ block.settings.image | image_url }}" alt="" class="xw-full">            
-              </div>
-            {% endfor %}
-          {% endif %}
-        </div>
     </div>
   </div>
+  <!-- scallops top -->
+  {% if section.settings.scallop_border_top == true %}
+  <div class="xflex xabsolute xtop-0 xleft-0">
+    <div class="xw-screen h-3/4">
+      <div style="background-image: url('../assets/scallop.png');" class="xbg-repeat-x xw-full xbg-contain">.</div>
+    </div>
+  </div>
+    {% endif %}
+    <!-- scallops bottom -->
+    {% if section.settings.scallop_border_bottom == true %}
+    <div class="xflex xabsolute xbottom-0 xleft-0 xrotate-180">
+      <div class="xw-screen h-3/4">
+        <div style="background-image: url('../assets/scallop.png');" class="xbg-repeat-x xw-full xbg-contain">.</div>
+      </div>
+    </div>
+    {% endif %}
 </div>
 
 {% schema %}
@@ -33,8 +49,20 @@
       "type": "color",
       "id": "bg_color",
       "label": "Background Color",
-      "default": "#33FFCC"
+      "default": "#33CCFF"
      },
+     {
+      "type": "checkbox",
+      "id": "scallop_border_top",
+      "label": "Scalloped Border Top",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "scallop_border_bottom",
+      "label": "Scalloped Border Bottom",
+      "default": false
+    },
     {
       "type": "select",
       "id": "image_width",
