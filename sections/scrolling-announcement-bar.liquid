@@ -1,0 +1,29 @@
+<article style="background-color:{{ section.settings.bg_color }};" class="xw-screen xoverflow-x-hidden xpy-3">
+    <marquee 
+        behavior="scroll" 
+        direction="left"
+    >
+        x {{ section.settings.text }} x {{ section.settings.text }} x {{ section.settings.text }} x {{ section.settings.text }} x {{ section.settings.text }} x
+    </marquee>
+</article>
+
+{% schema %}
+{
+    "name": "scrolling bar",
+    "settings": [
+       {
+        "type": "text",
+        "id": "text",
+        "label": "Announcement Text",
+        "default": "Enter your announcement text here",
+        "info": "You need to only enter the text once"
+        },
+        {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color",
+        "default": "#fff"
+        }
+    ]
+}
+{% endschema %}

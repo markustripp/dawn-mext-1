@@ -582,10 +582,6 @@ video {
   right: 0px;
 }
 
-.xbottom-1\/4 {
-  bottom: 25%;
-}
-
 .xbottom-1 {
   bottom: 0.25rem;
 }
@@ -598,6 +594,10 @@ video {
   bottom: 100%;
 }
 
+.xbottom-1\/4 {
+  bottom: 25%;
+}
+
 .xz-10 {
   z-index: 10;
 }
@@ -608,6 +608,26 @@ video {
 
 .xz-50 {
   z-index: 50;
+}
+
+.xorder-2 {
+  order: 2;
+}
+
+.xorder-1 {
+  order: 1;
+}
+
+.xorder-first {
+  order: -9999;
+}
+
+.xorder-last {
+  order: 9999;
+}
+
+.xcol-span-2 {
+  grid-column: span 2 / span 2;
 }
 
 .xmx-auto {
@@ -629,6 +649,10 @@ video {
   margin-top: 2rem;
 }
 
+.xmt-20 {
+  margin-top: 5rem;
+}
+
 .xblock {
   display: block;
 }
@@ -639,6 +663,14 @@ video {
 
 .xgrid {
   display: grid;
+}
+
+.xhidden {
+  display: none;
+}
+
+.xaspect-square {
+  aspect-ratio: 1 / 1;
 }
 
 .xh-full {
@@ -669,10 +701,6 @@ video {
   width: 5rem;
 }
 
-.xw-1\/2 {
-  width: 50%;
-}
-
 .xw-1 {
   width: 0.25rem;
 }
@@ -687,8 +715,32 @@ video {
   width: 13rem;
 }
 
+.xw-1\/2 {
+  width: 50%;
+}
+
+.xw-44 {
+  width: 11rem;
+}
+
 .xmax-w-6xl {
   max-width: 72rem;
+}
+
+.xmax-w-\[1260px\] {
+  max-width: 1260px;
+}
+
+.xmax-w-7xl {
+  max-width: 80rem;
+}
+
+.xmax-w-full {
+  max-width: 100%;
+}
+
+.xmax-w-\[1280px\] {
+  max-width: 1280px;
 }
 
 .xtranslate-y-8 {
@@ -732,8 +784,32 @@ video {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.xgrid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
 .xflex-col {
   flex-direction: column;
+}
+
+.xplace-content-center {
+  place-content: center;
+}
+
+.xplace-items-end {
+  place-items: end;
+}
+
+.xplace-items-center {
+  place-items: center;
+}
+
+.xitems-start {
+  align-items: flex-start;
+}
+
+.xitems-end {
+  align-items: flex-end;
 }
 
 .xitems-center {
@@ -760,10 +836,46 @@ video {
   gap: 0.5rem;
 }
 
+.xgap-24 {
+  gap: 6rem;
+}
+
+.xgap-10 {
+  gap: 2.5rem;
+}
+
+.xgap-8 {
+  gap: 2rem;
+}
+
+.xgap-20 {
+  gap: 5rem;
+}
+
+.xgap-32 {
+  gap: 8rem;
+}
+
+.xgap-28 {
+  gap: 7rem;
+}
+
 .xspace-x-5 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.25rem * var(--tw-space-x-reverse));
   margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.xplace-self-center {
+  place-self: center;
+}
+
+.xoverflow-hidden {
+  overflow: hidden;
+}
+
+.xoverflow-x-hidden {
+  overflow-x: hidden;
 }
 
 .xrounded-3xl {
@@ -776,6 +888,10 @@ video {
 
 .xborder-2 {
   border-width: 2px;
+}
+
+.xborder {
+  border-width: 1px;
 }
 
 .xborder-y-2 {
@@ -849,6 +965,14 @@ video {
   padding: 15rem;
 }
 
+.xp-8 {
+  padding: 2rem;
+}
+
+.xp-20 {
+  padding: 5rem;
+}
+
 .xpx-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -882,6 +1006,52 @@ video {
 .xpy-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.xpx-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.xpy-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.xpy-20 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.xpy-52 {
+  padding-top: 13rem;
+  padding-bottom: 13rem;
+}
+
+.xpx-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.xpy-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.xpt-24 {
+  padding-top: 6rem;
+}
+
+.xpb-52 {
+  padding-bottom: 13rem;
+}
+
+.xpt-20 {
+  padding-top: 5rem;
+}
+
+.xpb-24 {
+  padding-bottom: 6rem;
 }
 
 .xfont-heading {
@@ -935,19 +1105,47 @@ video {
   opacity: 1;
 }
 
-@media (min-width: 750px) {
-  .md\:xgrid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+@media (min-width: 640px) {
+  .sm\:xorder-first {
+    order: -9999;
+  }
+
+  .sm\:xorder-last {
+    order: 9999;
+  }
+
+  .sm\:xgrid {
+    display: grid;
   }
 }
 
-@media (min-width: 990px) {
-  .lg\:xgrid-cols-5 {
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+@media (min-width: 768px) {
+  .md\:xgrid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:xblock {
+    display: block;
   }
 
-  .lg\:xpy-8 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+  .lg\:xhidden {
+    display: none;
+  }
+
+  .lg\:xgrid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:xpy-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:xgrid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
