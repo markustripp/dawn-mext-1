@@ -1,9 +1,9 @@
 {{ 'component-image-with-text.css' | asset_url | stylesheet_tag }}
 
-<div class="image-with-text {% if section.settings.full_width %}image-with-text--full-width{% else %}page-width{% endif %} image-with-text--{{ section.settings.content_layout }} color-scheme-{{ section.settings.color_scheme }}">
-  <div class="image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}{% if section.settings.content_layout == 'no-overlap' %} gradient color-{{ section.settings.color_scheme }}{% endif %}">
+<div class="xmy-2 image-with-text {% if section.settings.full_width %}image-with-text--full-width{% else %}page-width{% endif %} image-with-text--{{ section.settings.content_layout }} color-scheme-{{ section.settings.color_scheme }}">
+  <div class="{% if section.settings.border_card == true %}shadow-border{% endif %}image-with-text__grid grid grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.layout == 'text_first' %} image-with-text__grid--reverse{% endif %}{% if section.settings.content_layout == 'no-overlap' %} gradient color-{{ section.settings.color_scheme }}{% endif %}">
     <div class="image-with-text__media-item image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
-      <div class="image-with-text__media image-with-text__media--{{ section.settings.height }} {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %}"
+      <div class="image-with-text__media image-with-text__media--{{ section.settings.height }} {% if section.settings.image != blank %}media{% else %}image-with-text__media--placeholder placeholder{% endif %} {% if section.settings.border_image == true %}shadow-border xoverflow-hidden{% endif %}"
         {% if section.settings.height == 'adapt' and section.settings.image != blank %} style="padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;"{% endif %}
       >
         {%- if section.settings.image != blank -%}
@@ -28,15 +28,28 @@
       </div>
     </div>
     <div class="image-with-text__text-item grid__item">
-      <div id="ImageWithText--{{ section.id }}" class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }}">
+      <div id="ImageWithText--{{ section.id }}" style="background-color: {{ section.settings.bg_color }};" class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }}">
         {%- for block in section.blocks -%}
           {% case block.type %}
             {%- when 'heading' -%}
-              <h2 class="image-with-text__heading {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
-                {{ block.settings.heading | escape }}
-              </h2>
+              
+              <div class="xflex xw-full">
+                <h2 class="xw-full image-with-text__heading {{ block.settings.heading_size }} lg:xmr-6" {{ block.shopify_attributes }}>
+                  {{ block.settings.heading | escape }}
+                </h2>
+                {% if block.settings.header_image != blank %}
+                  <div class="xrelative xw-2/5">
+                    <img src="{{ block.settings.header_image | img_url: 'master' }}" alt="" class="xabsolute xbottom-0 xleft-3">
+                  </div>
+                {% endif %}
+              </div>
+
+
             {%- when 'caption' -%}
-              <p class="image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}" {{ block.shopify_attributes }}>{{ block.settings.caption | escape }}</p>
+            <div class="xmax-w-3/4 xflex xitems-end xspace-x-2">
+              {% render 'icon-star' %}
+                <p class="image-with-text__text image-with-text__text--caption {{ block.settings.text_style }} {{ block.settings.text_style }}--{{ block.settings.text_size }} {{ block.settings.text_style }}" {{ block.shopify_attributes }}>{{ block.settings.caption | escape }}</p>
+            </div>  
             {%- when 'text' -%}
               <div class="image-with-text__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
             {%- when 'button' -%}
@@ -61,6 +74,24 @@
       "type": "image_picker",
       "id": "image",
       "label": "t:sections.image-with-text.settings.image.label"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#fff"
+    },
+    {
+      "type": "checkbox",
+      "id": "border_card",
+      "label": "Add border to card",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "border_image",
+      "label": "Add border to image",
+      "default": true
     },
     {
       "type": "select",
@@ -260,6 +291,11 @@
           ],
           "default": "h1",
           "label": "t:sections.image-with-text.blocks.heading.settings.heading_size.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "header_image",
+          "label": "Select image to show after title"
         }
       ]
     },

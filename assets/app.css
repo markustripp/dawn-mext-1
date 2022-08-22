@@ -598,6 +598,22 @@ video {
   bottom: 25%;
 }
 
+.xleft-full {
+  left: 100%;
+}
+
+.x-bottom-0 {
+  bottom: -0px;
+}
+
+.x-bottom-10 {
+  bottom: -2.5rem;
+}
+
+.xleft-3 {
+  left: 0.75rem;
+}
+
 .xz-10 {
   z-index: 10;
 }
@@ -645,6 +661,11 @@ video {
   margin-right: 1rem;
 }
 
+.xmy-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .xmt-8 {
   margin-top: 2rem;
 }
@@ -653,8 +674,32 @@ video {
   margin-top: 5rem;
 }
 
+.xmr-1 {
+  margin-right: 0.25rem;
+}
+
+.xmb-1 {
+  margin-bottom: 0.25rem;
+}
+
+.xmr-10 {
+  margin-right: 2.5rem;
+}
+
+.xmr-4 {
+  margin-right: 1rem;
+}
+
+.xmr-6 {
+  margin-right: 1.5rem;
+}
+
 .xblock {
   display: block;
+}
+
+.xinline {
+  display: inline;
 }
 
 .xflex {
@@ -723,6 +768,50 @@ video {
   width: 11rem;
 }
 
+.xw-3\/4 {
+  width: 75%;
+}
+
+.xw-3 {
+  width: 0.75rem;
+}
+
+.xw-1\/4 {
+  width: 25%;
+}
+
+.xw-2\/5 {
+  width: 40%;
+}
+
+.xw-2 {
+  width: 0.5rem;
+}
+
+.xw-1\/5 {
+  width: 20%;
+}
+
+.xw-4\/5 {
+  width: 80%;
+}
+
+.xw-4 {
+  width: 1rem;
+}
+
+.xmin-w-\[33\%\] {
+  min-width: 33%;
+}
+
+.xmin-w-\[70\%\] {
+  min-width: 70%;
+}
+
+.xmin-w-full {
+  min-width: 100%;
+}
+
 .xmax-w-6xl {
   max-width: 72rem;
 }
@@ -741,6 +830,18 @@ video {
 
 .xmax-w-\[1280px\] {
   max-width: 1280px;
+}
+
+.xmax-w-\[30\%\] {
+  max-width: 30%;
+}
+
+.xmax-w-\[1100px\] {
+  max-width: 1100px;
+}
+
+.xflex-grow {
+  flex-grow: 1;
 }
 
 .xtranslate-y-8 {
@@ -866,6 +967,18 @@ video {
   margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.xspace-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.xspace-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .xplace-self-center {
   place-self: center;
 }
@@ -892,6 +1005,10 @@ video {
 
 .xborder {
   border-width: 1px;
+}
+
+.xborder-4 {
+  border-width: 4px;
 }
 
 .xborder-y-2 {
@@ -955,6 +1072,11 @@ video {
 
 .xbg-repeat-x {
   background-repeat: repeat-x;
+}
+
+.xobject-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .xp-5 {
@@ -1054,6 +1176,10 @@ video {
   padding-bottom: 6rem;
 }
 
+.xpr-10 {
+  padding-right: 2.5rem;
+}
+
 .xfont-heading {
   font-family: var(--font-heading-family);
 }
@@ -1126,6 +1252,10 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:xmr-6 {
+    margin-right: 1.5rem;
+  }
+
   .lg\:xblock {
     display: block;
   }

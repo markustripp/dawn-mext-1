@@ -1,4 +1,34 @@
-{{ section.settings.custom_liquid }}
+<div style="background-color: {{ section.settings.bg_color }}; color: {{ section.settings.text_color }};" class="xw-full xrelative xpy-52">
+  <div class="xmax-w-[1100px] xmx-auto {% if text_border == true %}white-text-black-stroke{% endif %}">
+    <div>
+      <h2>{{ section.settings.title }}</h2>
+    </div>
+    {% if section.settings.caption != blank %}
+       <div class="xflex xitems-center xspace-x-4">
+      <p>
+      {{ section.settings.caption }} 
+        <div>{% render 'icon-question-mark' %}</div>
+      </p>
+    </div>
+    {% endif %}
+   
+    <!-- button -->
+    <div class="xflex xitems-center xjustify-between">
+      <button type="button" class="button">
+        {{ section.settings.button_label }}
+      </button>
+    </div>
+  </div>
+
+  <!-- scallops top -->
+  {% if section.settings.scallop_border_top == true %}
+    {% render 'border-scallop-top' %}
+  {% endif %}
+  <!-- scallops bottom -->
+  {% if section.settings.scallop_border_bottom == true %}
+    {% render 'border-scallop-bottom' %}
+  {% endif %}
+</div>
 
 {% schema %}
 {
@@ -7,10 +37,60 @@
   "class": "spaced-section",
   "settings": [
     {
-      "type": "liquid",
-      "id": "custom_liquid",
-      "label": "t:sections.custom-liquid.settings.custom_liquid.label",
-      "info": "t:sections.custom-liquid.settings.custom_liquid.info"
+      "type": "header",
+      "content": "Card Appearance"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#31AF46"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#fff"
+    },
+    {
+      "type": "checkbox",
+      "id": "scallop_border_top",
+      "label": "Scalloped Border Top",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "scallop_border_bottom",
+      "label": "Scalloped Border Bottom",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Our Social Lookbook"
+    },
+    {
+      "type": "checkbox",
+      "id": "text_border",
+      "label": "Title text stroke",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "More Information Comment",
+      "default": "Get Featured"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Load more"
     }
   ],
   "presets": [
