@@ -63,7 +63,7 @@
 }
 
 .price--on-sale .price__sale {
-  color: #FF00CC;
+  color: rgb(var(--color-base-accent-2));
   font-size: 16px;
   display: flex;
   flex-direction: row;
@@ -77,8 +77,8 @@
 
 .price--on-sale .price-item--regular {
   text-decoration: line-through;
-  color: rgba(var(--color-foreground), 0.75);
-  font-size: 1.3rem;
+  color: rgba(var(--color-foreground), 0.85);
+  font-size: 1.6rem;
 }
 
 .unit-price {

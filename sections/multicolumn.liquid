@@ -7,7 +7,7 @@
       <div class="xgrid xgrid-cols-2 md:xgrid-cols-3 lg:xgrid-cols-4 xl:xgrid-cols-5 xgap-24">
         {% if section.blocks.size > 0 %}
           {% for block in section.blocks %}
-            <div class="xflex xitems-center xjustify-center xbg-white xaspect-square shadow-border">
+            <div class="xflex xitems-center xjustify-center xbg-white xaspect-square">
               <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}" class="xp-5">            
             </div>
           {% endfor %}

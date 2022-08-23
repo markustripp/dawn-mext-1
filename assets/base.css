@@ -174,7 +174,7 @@ html.no-js .no-js-hidden {
 .page-width {
   max-width: var(--page-width);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 0.5rem;
 }
 
 .page-width-desktop {
@@ -184,7 +184,7 @@ html.no-js .no-js-hidden {
 
 @media screen and (min-width: 750px) {
   .page-width {
-    padding: 0 5rem;
+    padding: 0 0.5rem;
   }
 
   .page-width--narrow {
@@ -392,25 +392,25 @@ h1,
 
 h2,
 .h2 {
-  font-size: calc(var(--font-heading-scale) * 2rem);
+  font-size: calc(var(--font-heading-scale) * 3.5rem);
 }
 
 @media only screen and (min-width: 750px) {
   h2,
   .h2 {
-    font-size: calc(var(--font-heading-scale) * 2.4rem);
+    font-size: calc(var(--font-heading-scale) * 2.8rem);
   }
 }
 
 h3,
 .h3 {
-  font-size: calc(var(--font-heading-scale) * 1.7rem);
+  font-size: calc(var(--font-heading-scale) * 1.6rem);
 }
 
 @media only screen and (min-width: 750px) {
   h3,
   .h3 {
-    font-size: calc(var(--font-heading-scale) * 1.8rem);
+    font-size: calc(var(--font-heading-scale) * 1.6rem);
   }
 }
 
@@ -423,13 +423,13 @@ h4,
 
 h5,
 .h5 {
-  font-size: calc(var(--font-heading-scale) * 1.2rem);
+  font-size: calc(var(--font-heading-scale) * 2.3rem);
 }
 
 @media only screen and (min-width: 750px) {
   h5,
   .h5 {
-    font-size: calc(var(--font-heading-scale) * 1.3rem);
+    font-size: calc(var(--font-heading-scale) * 2.3rem);
   }
 }
 
@@ -443,12 +443,6 @@ h6,
 .white-text-black-stroke {
   text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000;
   color: white !important;
-}
-
-.shadow-border {
-  box-shadow: black 3px 3px 0 0;
-  border: black 3px solid;
-  border-radius: 24px;
 }
 
 blockquote {
@@ -484,8 +478,16 @@ blockquote {
 }
 
 .caption-with-letter-spacing--medium {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   letter-spacing: 0.16rem;
+}
+
+@media screen and (min-width: 750px) {
+  .caption-with-letter-spacing--medium {
+    font-size: 1.8rem;
+    letter-spacing: 0.25rem;
+  }
+  
 }
 
 .caption-with-letter-spacing--large {
@@ -587,7 +589,7 @@ h6:empty {
   text-underline-offset: 0.3rem;
   color: rgb(var(--color-link));
   background-color: transparent;
-  font-size: 1.4rem;
+  font-size: 1.7rem;
   font-family: inherit;
 }
 
@@ -2231,7 +2233,7 @@ details[open] > .header__icon--menu .icon-hamburger {
 .header__menu-item {
   padding: 1.2rem;
   text-decoration: none;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground), 0.85);
 }
 
 .header__menu-item:hover {
