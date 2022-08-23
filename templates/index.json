@@ -43,6 +43,7 @@
     },
     "1660760840b614851d": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": ""
       }
@@ -167,6 +168,7 @@
     },
     "166075888494baaec7": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "Our social lookbook"
       }
