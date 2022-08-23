@@ -39,6 +39,7 @@
   .list-menu--inline {
     display: inline-flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   summary.list-menu__item {
@@ -331,8 +332,8 @@
     {%- endif -%}
         <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
           {%- if section.settings.logo != blank -%}
-            {%- assign image_size = section.settings.logo_width | append: 'x' -%}
-            <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
+              {%- assign image_size = section.settings.logo_width | append: 'x' -%}
+              <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
               src="{{ section.settings.logo | img_url: image_size }}"
               loading="lazy"
               class="header__heading-logo"
@@ -352,7 +353,7 @@
       <nav class="header__inline-menu">
         <ul class="list-menu list-menu--inline" role="list">
           {%- for link in section.settings.menu.links -%}
-            <li>
+            <li class="uppercase">
               {%- if link.links != blank -%}
                 <details-disclosure>
                   <details id="Details-HeaderMenu-{{ forloop.index }}">
@@ -400,17 +401,15 @@
       </nav>
     {%- endif -%}
 
-    <div class="header__icons">
+    <!-- Search and Shopping Bag Icons -->
+    <div class="xflex xjustify-between xitems-center xgap-5">
+    <div class="xflex xspace-x-5">
       <details-modal class="header__search">
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
             <span>
-              <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false" role="presentation">
-                <use href="#icon-search">
-              </svg>
-              <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false" role="presentation">
-                <use href="#icon-close">
-              </svg>
+              <!-- search icon -->
+              {% render 'icon-search' %}
             </span>
           </summary>
           <div class="search-modal modal__content" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
@@ -470,11 +469,12 @@
                 </svg>
               </button>
             </div>
+
           </div>
         </details>
       </details-modal>
 
-      {%- if shop.customer_accounts_enabled -%}
+      <!-- {%- if shop.customer_accounts_enabled -%}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
           {% render 'icon-account' %}
           <span class="visually-hidden">
@@ -487,7 +487,7 @@
             -%}
           </span>
         </a>
-      {%- endif -%}
+      {%- endif -%} -->
 
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
         {%- liquid
@@ -507,6 +507,10 @@
           </div>
         {%- endif -%}
       </a>
+    </div>
+    {% if section.settings.header_image %}
+      <img src="{{ section.settings.header_image | img_url }}" style="width:{{ section.settings.header_image_width }}px" alt="{{ section.settings.header_image.alt }}">
+    {% endif %}
     </div>
   </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
@@ -713,6 +717,21 @@
       "default": "middle-left",
       "label": "t:sections.header.settings.logo_position.label",
       "info": "t:sections.header.settings.logo_position.info"
+    },
+    {
+      "type": "image_picker",
+      "id": "header_image",
+      "label": "Header Tag"
+    },
+    {
+      "type": "range",
+      "id": "header_image_width",
+      "min": 50,
+      "max": 250,
+      "step": 10,
+      "default": 100,
+      "unit": "px",
+      "label": "Header Tag Width"
     },
     {
       "type": "link_list",

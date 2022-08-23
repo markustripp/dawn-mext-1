@@ -304,11 +304,6 @@
     transform: scale(1.03);
   }
 
-  .card-wrapper:hover .card-information__text {
-    text-decoration: underline;
-    text-underline-offset: 0.3rem;
-  }
-
   .card-wrapper:hover .card--search img {
     transform: scale(1.05);
   }

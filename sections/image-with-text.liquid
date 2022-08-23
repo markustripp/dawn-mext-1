@@ -63,6 +63,12 @@
       "label": "t:sections.image-with-text.settings.image.label"
     },
     {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#fff"
+    },
+    {
       "type": "select",
       "id": "height",
       "options": [
@@ -260,6 +266,17 @@
           ],
           "default": "h1",
           "label": "t:sections.image-with-text.blocks.heading.settings.heading_size.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "stroke",
+          "label": "Add stroke to heading",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "header_image",
+          "label": "Select image to show after title"
         }
       ]
     },

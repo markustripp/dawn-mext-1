@@ -25,7 +25,7 @@
       {%- endif -%}
 
       {%- if product_card_product.featured_media -%}
-        <h3 class="card-information__text h5">
+        <h3 class="h5">
           <a href="{{ product_card_product.url | default: '#' }}" class="full-unstyled-link">
             {{ product_card_product.title | escape }}
           </a>
@@ -124,9 +124,9 @@
       <div class="card__badge">
         {%- if product_card_product.available == false -%}
           <span class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}">{{ 'products.product.sold_out' | t }}</span>
-        {%- elsif product_card_product.compare_at_price > product_card_product.price and product_card_product.available -%}
-          <span class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span>
         {%- endif -%}
+        <!-- elsif product_card_product.compare_at_price > product_card_product.price and product_card_product.available
+          <span class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}">{{ 'products.product.on_sale' | t }}</span> -->
       </div>
     </div>
   </div>

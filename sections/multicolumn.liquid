@@ -1,97 +1,28 @@
-{{ 'section-multicolumn.css' | asset_url | stylesheet_tag }}
-<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
-<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
-
-<div class="multicolumn background-{{ section.settings.background_style }}{% if section.settings.title == blank %} no-heading{% endif %}">
-  <div class="page-width">
-    <div class="title-wrapper-with-link title-wrapper--self-padded-mobile{% if section.settings.title == blank %} title-wrapper-with-link--no-heading{% endif %}">
-      <h2 class="title">
-        {{ section.settings.title | escape }}
-      </h2>
-      {%- if section.settings.button_label != blank and section.settings.swipe_on_mobile -%}
-        <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">{{ section.settings.button_label | escape }}</a>
-      {%- endif -%}
+<div style="background-color: {{ section.settings.bg_color }};" class="xrelative xpt-24 xpb-52 xpx-8 xoverflow-x-hidden">
+  <div class="xmax-w-[1260px] xmx-auto">
+    <div>
+      <h3 class="xtext-white lg:xpy-4 white-text-black-stroke">{{ section.settings.title }}</h3>
     </div>
-    <slider-component class="slider-mobile-gutter">
-      <ul class="multicolumn-list grid grid--1-col{% if section.blocks.size > 3 and section.settings.image_width != 'full' %} grid--2-col-tablet grid--4-col-desktop{% elsif section.blocks.size > 3 and section.settings.image_width == 'full' %} grid--2-col-tablet{% else %} grid--3-col-tablet{% endif %}{% if section.settings.swipe_on_mobile and section.blocks.size > 1 %} slider slider--mobile grid--peek{% endif %}"
-        id="Slider-{{ section.id }}"
-        role="list"
-      >
-        {%- liquid
-          assign highest_ratio = 0
-          for block in section.blocks
-            if block.settings.image.aspect_ratio > highest_ratio
-              assign highest_ratio = block.settings.image.aspect_ratio
-            endif
-          endfor
-        -%}
-        {%- for block in section.blocks -%}
-          <li id="Slide-{{ section.id }}-{{ forloop.index }}" class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}" {{ block.shopify_attributes }}>
-            <div class="multicolumn-card">
-              {%- if block.settings.image != blank -%}
-                {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
-                  {% assign spaced_image = true %}
-                {% endif %}
-                <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
-                  <div class="media media--transparent media--{{ section.settings.image_ratio }}"
-                    {% if section.settings.image_ratio == 'adapt' %}
-                      style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
-                    {% endif %}>
-                    <img
-                      srcset="{%- if block.settings.image.width >= 275 -%}{{ block.settings.image | img_url: '275x' }} 275w,{%- endif -%}
-                        {%- if block.settings.image.width >= 550 -%}{{ block.settings.image | img_url: '550x' }} 550w,{%- endif -%}
-                        {%- if block.settings.image.width >= 710 -%}{{ block.settings.image | img_url: '710x' }} 710w,{%- endif -%}
-                        {%- if block.settings.image.width >= 1420 -%}{{ block.settings.image | img_url: '1420x' }} 1420w,{%- endif -%}
-                        {{ block.settings.image | img_url: 'master' }} {{ block.settings.image.width }}w"
-                      src="{{ block.settings.image | img_url: '550x' }}"
-                      sizes="(min-width: 990px) {% if section.blocks.size <= 2 %}710px{% else %}550px{% endif %},
-                        (min-width: 750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %},
-                        calc(100vw - 30px)"
-                      alt="{{ block.settings.image.alt }}"
-                      height="{{ block.settings.image.height }}"
-                      width="{{ block.settings.image.width }}"
-                      loading="lazy"
-                    >
-                  </div>
-                </div>
-              {%- endif -%}
-              <div class="multicolumn-card__info">
-                {%- if block.settings.title != blank -%}
-                  <h3>{{ block.settings.title | escape }}</h3>
-                {%- endif -%}
-                {%- if block.settings.text != blank -%}
-                  <div class="rte">{{ block.settings.text }}</div>
-                {%- endif -%}
-                {%- if block.settings.link_label != blank -%}
-                  <a class="link animate-arrow" {% if block.settings.link == blank %}role="link" aria-disabled="true"{% else %}href="{{ block.settings.link }}"{% endif %}>{{ block.settings.link_label | escape }}<span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span></a>
-                {%- endif -%}
-              </div>
+    <div class="xpt-20 xpx-8">
+      <div class="xgrid xgrid-cols-2 md:xgrid-cols-3 lg:xgrid-cols-4 xl:xgrid-cols-5 xgap-24">
+        {% if section.blocks.size > 0 %}
+          {% for block in section.blocks %}
+            <div class="xflex xitems-center xjustify-center xbg-white xaspect-square">
+              <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}" class="xp-5">            
             </div>
-          </li>
-        {%- endfor -%}
-      </ul>
-
-      {%- if section.settings.swipe_on_mobile -%}
-        <div class="slider-buttons no-js-hidden medium-hide{% if section.blocks.size < 2 %} small-hide{% endif %}">
-          <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'general.slider.previous_slide' | t }}">{% render 'icon-caret' %}</button>
-          <div class="slider-counter caption">
-            <span class="slider-counter--current">1</span>
-            <span aria-hidden="true"> / </span>
-            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-            <span class="slider-counter--total">{{ section.blocks.size }}</span>
-          </div>
-          <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'general.slider.next_slide' | t }}">{% render 'icon-caret' %}</button>
-        </div>
-      {%- endif -%}
-    </slider-component>
-    <div class="center{% if section.settings.swipe_on_mobile %} small-hide medium-hide{% endif %}">
-      {%- if section.settings.button_label != blank -%}
-        <a class="button button--primary"{% if section.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ section.settings.button_link }}"{% endif %}>
-          {{ section.settings.button_label | escape }}
-        </a>
-      {%- endif-%}
+          {% endfor %}
+        {% endif %}
+      </div>
     </div>
   </div>
+  <!-- scallops top -->
+  {% if section.settings.scallop_border_top == true %}
+    {% render 'border-scallop-top' %}
+    {% endif %}
+    <!-- scallops bottom -->
+    {% if section.settings.scallop_border_bottom == true %}
+    {% render 'border-scallop-bottom' %}
+  {% endif %}
 </div>
 
 {% schema %}
@@ -105,6 +36,24 @@
       "id": "title",
       "default": "Multicolumn",
       "label": "t:sections.multicolumn.settings.title.label"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#33CCFF"
+     },
+     {
+      "type": "checkbox",
+      "id": "scallop_border_top",
+      "label": "Scalloped Border Top",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "scallop_border_bottom",
+      "label": "Scalloped Border Bottom",
+      "default": false
     },
     {
       "type": "select",
