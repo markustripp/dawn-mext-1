@@ -21,14 +21,14 @@
     <h2 class="title{% if section.settings.title == blank %} title--no-heading{% endif %}">{{ section.settings.title | escape }}</h2>
 
     {%- if section.settings.show_view_all and section.settings.swipe_on_mobile and more_in_collection -%}
-      <a href="{{ section.settings.collection.url }}" class="lg:xhidden">{{ 'sections.featured_collection.view_all' | t }}</a>
+      <a href="{{ section.settings.collection.url }}" class="lg:xhidden">{{ 'sections.featured_collection.view_all' | t | upcase }}</a>
     {%- endif -%}
     {%- if section.settings.show_view_all and more_in_collection -%}
     <div class="center{% if section.settings.swipe_on_mobile %} xhidden lg:xblock{% endif %}">
       <a href="{{ section.settings.collection.url }}"
         aria-label="{{ 'sections.featured_collection.view_all_label' | t: collection_name: section.settings.collection.title }}"
       >
-        {{ 'sections.featured_collection.view_all' | t }}
+        {{ 'sections.featured_collection.view_all' | t |upcase }}
       </a>
     </div>
   {%- endif -%}

@@ -1849,6 +1849,7 @@ input[type="checkbox"] {
 }
 
 .announcement-bar__link .announcement-bar__message {
+  font-size: 16px !important;
   padding: 0;
 }
 
