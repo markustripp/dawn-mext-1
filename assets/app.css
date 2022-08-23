@@ -993,6 +993,10 @@ video {
   border-radius: 0.5rem;
 }
 
+.xrounded-\[24px\] {
+  border-radius: 24px;
+}
+
 .xborder-2 {
   border-width: 2px;
 }
@@ -1218,12 +1222,29 @@ video {
   line-height: 1;
 }
 
+.xtext-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.xtext-\[16px\] {
+  font-size: 16px;
+}
+
+.xtext-\[14px\] {
+  font-size: 14px;
+}
+
 .xfont-bold {
   font-weight: 700;
 }
 
 .xfont-light {
   font-weight: 300;
+}
+
+.xfont-semibold {
+  font-weight: 600;
 }
 
 .xuppercase {
@@ -1287,6 +1308,12 @@ video {
 
 .xgroup:hover .group-hover\:xopacity-100 {
   opacity: 1;
+}
+
+@media (min-width: 640px) {
+  .sm\:xtext-\[16px\] {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 768px) {

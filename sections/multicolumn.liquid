@@ -1,13 +1,13 @@
 <div style="background-color: {{ section.settings.bg_color }};" class="xrelative xpt-24 xpb-52 xpx-8 xoverflow-x-hidden">
   <div class="xmax-w-[1260px] xmx-auto">
     <div>
-      <h3 class="xtext-white lg:xpy-4 white-text-black-stroke">{{ section.settings.title }}</h3>
+      <h2 class="white-text-black-stroke h1">{{ section.settings.title }}</h2>
     </div>
     <div class="xpt-20 xpx-8">
       <div class="xgrid xgrid-cols-2 md:xgrid-cols-3 lg:xgrid-cols-4 xl:xgrid-cols-5 xgap-24">
         {% if section.blocks.size > 0 %}
           {% for block in section.blocks %}
-            <div class="xflex xitems-center xjustify-center xbg-white xaspect-square">
+            <div class="xflex xitems-center xjustify-center xbg-white xaspect-square xrounded-[24px] shadow-border">
               <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}" class="xp-5">            
             </div>
           {% endfor %}
@@ -15,15 +15,18 @@
       </div>
     </div>
   </div>
-  <!-- scallops top -->
-  {% if section.settings.scallop_border_top == true %}
-    {% render 'border-scallop-top' %}
-    {% endif %}
-    <!-- scallops bottom -->
-    {% if section.settings.scallop_border_bottom == true %}
-    {% render 'border-scallop-bottom' %}
-  {% endif %}
+  <!-- scallops top and bottom -->
+  {% render 'border-scallop-top' %}
+  {% render 'border-scallop-bottom' %}
 </div>
+
+<style>
+  .shadow-border {
+  box-shadow: black 3px 3px 0 0;
+  border: black 3px solid;
+  border-radius: 24px;
+}
+</style>
 
 {% schema %}
 {
@@ -42,18 +45,6 @@
       "id": "bg_color",
       "label": "Background Color",
       "default": "#33CCFF"
-     },
-     {
-      "type": "checkbox",
-      "id": "scallop_border_top",
-      "label": "Scalloped Border Top",
-      "default": false
-    },
-    {
-      "type": "checkbox",
-      "id": "scallop_border_bottom",
-      "label": "Scalloped Border Bottom",
-      "default": false
     },
     {
       "type": "select",
