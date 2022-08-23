@@ -28,10 +28,14 @@
         "button"
       ],
       "settings": {
+        "border": "",
+        "scallop_border_top": false,
+        "scallop_border_bottom": true,
         "image": "shopify:\/\/shop_images\/banner.gif-yellow-2.gif",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "adapt_height_first_image": false,
+        "site_link": "",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
         "desktop_content_alignment": "center",
@@ -45,7 +49,15 @@
       "type": "custom-liquid",
       "disabled": true,
       "settings": {
-        "custom_liquid": ""
+        "bg_color": "#31AF46",
+        "text_color": "#fff",
+        "scallop_border_top": true,
+        "scallop_border_bottom": true,
+        "position": 0,
+        "title": "Our Social Lookbook",
+        "text_border": true,
+        "caption": "Get Featured",
+        "button_label": "Load more"
       }
     },
     "featured_products": {
@@ -142,6 +154,8 @@
       ],
       "settings": {
         "layout": "full_bleed",
+        "scallop_border_top": false,
+        "scallop_border_bottom": false,
         "slide_height": "adapt_image",
         "slider_visual": "counter",
         "auto_rotate": false,
@@ -170,7 +184,15 @@
       "type": "custom-liquid",
       "disabled": true,
       "settings": {
-        "custom_liquid": "Our social lookbook"
+        "bg_color": "#31AF46",
+        "text_color": "#fff",
+        "scallop_border_top": true,
+        "scallop_border_bottom": true,
+        "position": 0,
+        "title": "Our Social Lookbook",
+        "text_border": true,
+        "caption": "Get Featured",
+        "button_label": "Load more"
       }
     },
     "166075891041478f50": {
@@ -251,6 +273,8 @@
       ],
       "settings": {
         "layout": "full_bleed",
+        "scallop_border_top": false,
+        "scallop_border_bottom": false,
         "slide_height": "adapt_image",
         "slider_visual": "counter",
         "auto_rotate": false,
@@ -476,6 +500,9 @@
       ],
       "settings": {
         "title": "AS SEEN ON",
+        "bg_color": "#33CCFF",
+        "scallop_border_top": false,
+        "scallop_border_bottom": false,
         "image_width": "full",
         "image_ratio": "adapt",
         "column_alignment": "left",
