@@ -49,8 +49,8 @@
       "type": "custom-liquid",
       "disabled": true,
       "settings": {
-        "bg_color": "#31AF46",
-        "text_color": "#fff",
+        "bg_color": "#31af46",
+        "text_color": "#ffffff",
         "scallop_border_top": true,
         "scallop_border_bottom": true,
         "position": 0,
@@ -91,7 +91,8 @@
           "type": "heading",
           "settings": {
             "heading": "BECOME AN AMBASSADOR!",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "stroke": false
           }
         },
         "166075899324c06463-1": {
@@ -117,6 +118,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/widget.gif",
+        "bg_color": "#fff",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -154,8 +156,8 @@
       ],
       "settings": {
         "layout": "full_bleed",
-        "scallop_border_top": false,
-        "scallop_border_bottom": false,
+        "scallop_border_top": true,
+        "scallop_border_bottom": true,
         "slide_height": "adapt_image",
         "slider_visual": "counter",
         "auto_rotate": false,
@@ -184,8 +186,8 @@
       "type": "custom-liquid",
       "disabled": true,
       "settings": {
-        "bg_color": "#31AF46",
-        "text_color": "#fff",
+        "bg_color": "#31af46",
+        "text_color": "#ffffff",
         "scallop_border_top": true,
         "scallop_border_bottom": true,
         "position": 0,
@@ -210,7 +212,8 @@
           "type": "heading",
           "settings": {
             "heading": "FART STUFF!",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "stroke": false
           }
         },
         "1660758909ce8ec6e8-1": {
@@ -236,6 +239,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/fart-tile.gif-white_b4e50482-4bc4-4431-a078-631257bd4c2d.gif",
+        "bg_color": "#fff",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -314,7 +318,8 @@
           "type": "heading",
           "settings": {
             "heading": "MADE IN THE USA",
-            "heading_size": "h1"
+            "heading_size": "h1",
+            "stroke": false
           }
         },
         "1660758718267bc75d-1": {
@@ -340,6 +345,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/infographic_2000x2000-web.jpg",
+        "bg_color": "#fff",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -500,9 +506,7 @@
       ],
       "settings": {
         "title": "AS SEEN ON",
-        "bg_color": "#33CCFF",
-        "scallop_border_top": false,
-        "scallop_border_bottom": false,
+        "bg_color": "#33ccff",
         "image_width": "full",
         "image_ratio": "adapt",
         "column_alignment": "left",
