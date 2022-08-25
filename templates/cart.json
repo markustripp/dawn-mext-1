@@ -4,7 +4,6 @@
       "type": "custom-liquid",
       "disabled": true,
       "settings": {
-        "custom_liquid": "YOU ARE $12.95 AWAY FROM FREE SHIPPING!"
       }
     },
     "cart-items": {
