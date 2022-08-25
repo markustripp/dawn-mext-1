@@ -1,14 +1,18 @@
-<div style="background-color: {{ section.settings.bg_color }};" class="xrelative xpt-24 xpb-52 xpx-8 xoverflow-x-hidden">
+<div class="xrelative xpt-24 xpb-52 xpx-8 xoverflow-x-hidden color-{{ section.settings.color_scheme }}">
   <div class="xmax-w-[1260px] xmx-auto">
     <div>
       <h2 class="white-text-black-stroke h1">{{ section.settings.title }}</h2>
     </div>
     <div class="xpt-20 xpx-8">
-      <div class="xgrid xgrid-cols-2 md:xgrid-cols-3 lg:xgrid-cols-4 xl:xgrid-cols-5 xgap-24">
+      <div class="xgrid xgrid-cols-2 md:xgrid-cols-3 lg:xgrid-cols-4 xl:xgrid-cols-5 xgap-12 sm:xgap-24">
         {% if section.blocks.size > 0 %}
           {% for block in section.blocks %}
-            <div class="xflex xitems-center xjustify-center xbg-white xaspect-square xrounded-[24px] shadow-border">
-              <img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.image.alt }}" class="xp-5">            
+            <div class="xflex xitems-center xjustify-center xbg-white xaspect-square xrounded-[24px] shadow-border xoverflow-hidden">
+              <img
+                src="{{ block.settings.image | img_url: 'master' }}"
+                alt="{{ block.settings.image.alt }}"
+                class="xp-2 sm:xp-5"
+              >
             </div>
           {% endfor %}
         {% endif %}
@@ -21,11 +25,11 @@
 </div>
 
 <style>
-  .shadow-border {
-  box-shadow: black 3px 3px 0 0;
-  border: black 3px solid;
-  border-radius: 24px;
-}
+    .shadow-border {
+    box-shadow: black 3px 3px 0 0;
+    border: black 3px solid;
+    border-radius: 24px;
+  }
 </style>
 
 {% schema %}
@@ -39,12 +43,6 @@
       "id": "title",
       "default": "Multicolumn",
       "label": "t:sections.multicolumn.settings.title.label"
-    },
-    {
-      "type": "color",
-      "id": "bg_color",
-      "label": "Background Color",
-      "default": "#33CCFF"
     },
     {
       "type": "select",
@@ -105,6 +103,34 @@
       ],
       "default": "left",
       "label": "t:sections.multicolumn.settings.column_alignment.label"
+    },
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "background-1",
+          "label": "t:sections.image-with-text.settings.color_scheme.options__1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.image-with-text.settings.color_scheme.options__2.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.image-with-text.settings.color_scheme.options__3.label"
+        },
+        {
+          "value": "accent-1",
+          "label": "t:sections.image-with-text.settings.color_scheme.options__4.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.image-with-text.settings.color_scheme.options__5.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.image-with-text.settings.color_scheme.label"
     },
     {
       "type": "select",

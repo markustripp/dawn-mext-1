@@ -1,38 +1,81 @@
-<div style="border-top: black solid 2px; border-bottom: black solid 2px" class="xflex xspace-x-4 xw-full xpy-6 xmy-6 lg:xmy-12 xbg-[#09C5EF] xwhitespace-nowrap xoverflow-x-hidden">
-    <div class="scrolling xflex xspace-x-4 xitems-center xtext-[14px] sm:xtext-[16px] xfont-semibold">
-        {% render 'icon-star' %}<div>Best gay socks on the block since 2012</div> {% render 'icon-star' %}<div>Best gay socks on the block since 2012</div> {% render 'icon-star' %}<div>Best gay socks on the block since 2012</div> {% render 'icon-star' %}<div>Best gay socks on the block since 2012</div> {% render 'icon-star' %}<div>Best gay socks on the block since 2012</div> {% render 'icon-star' %}
-    <div>Best gay socks on the block since 2012</div> {% render 'icon-star' %}<div>Best gay socks on the block since 2012</div> {% render 'icon-star' %}<div>Best gay socks on the block since 2012</div> {% render 'icon-star' %}<div>Best gay socks on the block since 2012</div> {% render 'icon-star' %}<div>Best gay socks on the block since 2012</div> {% render 'icon-star' %}
-    <div>Best gay socks on the block since 2012</div> {% render 'icon-star' %}<div>Best gay socks on the block since 2012</div> {% render 'icon-star' %}<div>Best gay socks on the block since 2012</div> {% render 'icon-star' %}<div>Best gay socks on the block since 2012</div> {% render 'icon-star' %}<div>Best gay socks on the block since 2012</div> {% render 'icon-star' %}
+<div
+  style="border-top: black solid 2px; border-bottom: black solid 2px;"
+  class="xflex xspace-x-4 xw-full xpy-4 sm:xpy-6 xmy-20 lg:xmy-40 xbg-[#09C5EF] xwhitespace-nowrap xoverflow-x-hidden"
+>
+  <div class="scrolling xflex xspace-x-4 xitems-center xtext-[14px] sm:xtext-[16px] xfont-semibold">
+    {% if section.settings.text != blank %}
+      {% render 'icon-star' %}
+      <div>{{ section.settings.text }}</div>
+      {% render 'icon-star' %}
+      <div>{{ section.settings.text }}</div>
+      {% render 'icon-star' %}
+      <div>{{ section.settings.text }}</div>
+      {% render 'icon-star' %}
+      <div>{{ section.settings.text }}</div>
+      {% render 'icon-star' %}
+      <div>{{ section.settings.text }}</div>
+      {% render 'icon-star' %}
+      <div>{{ section.settings.text }}</div>
+      {% render 'icon-star' %}
+      <div>{{ section.settings.text }}</div>
+      {% render 'icon-star' %}
+      <div>{{ section.settings.text }}</div>
+      {% render 'icon-star' %}
+      <div>{{ section.settings.text }}</div>
+      {% render 'icon-star' %}
+      <div>{{ section.settings.text }}</div>
+      {% render 'icon-star' %}
+      <div>{{ section.settings.text }}</div>
+      {% render 'icon-star' %}
+      <div>{{ section.settings.text }}</div>
+      {% render 'icon-star' %}
+      <div>{{ section.settings.text }}</div>
+      {% render 'icon-star' %}
+      <div>{{ section.settings.text }}</div>
+      {% render 'icon-star' %}
+      <div>{{ section.settings.text }}</div>
+      {% render 'icon-star' %}
+    {% endif %}
+  </div>
 </div>
-    </div>
 <style>
+  @media screen and (min-width: '1020px') {
 
-div.scrolling{
-  position: relative;
-  -webkit-animation: scroll 20s infinite linear;;
-  -moz-animation: scroll 20s infinite linear;
-  -o-animation: scroll 20s infinite linear;
-  animation: scroll 20s infinite linear;
-}
+  }
+  div.scrolling{
+    position: relative;
+    -webkit-animation: scroll 20s infinite linear;;
+    -moz-animation: scroll 20s infinite linear;
+    -o-animation: scroll 20s infinite linear;
+    animation: scroll 20s infinite linear;
+  }
 
-@keyframes scroll{
-    0%   {left: 500px;}
-    100% {left: -950px;}
-}
-@-webkit-keyframes scroll{
-    0%   {left: 500px;}
-    100% {left: -950px;}
-}
+  @keyframes scroll{
+      0%   {left: 500px;}
+      100% {left: -950px;}
+  }
+  @-webkit-keyframes scroll{
+      0%   {left: 500px;}
+      100% {left: -950px;}
+  }
 </style>
 
 {% schema %}
 {
-    "name": "Scrolling Banner",
-    "settings": [],
-    "presets": [
-        {
-            "name": "Scrolling Banner"
-        }
-    ]
+  "name": "Scrolling Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Banner Text",
+      "default": "Checkout our latest promotion!",
+      "info": "(Type the message only once)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Scrolling Banner"
+    }
+  ]
 }
 {% endschema %}

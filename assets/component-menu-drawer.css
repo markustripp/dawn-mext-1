@@ -4,7 +4,7 @@
 
 .js menu-drawer > details > summary::before,
 .js menu-drawer > details[open]:not(.menu-opening) > summary::before {
-  content: '';
+  content: "";
   position: absolute;
   cursor: default;
   width: 100%;
@@ -30,17 +30,23 @@ menu-drawer > details[open] > summary::before {
 
 .menu-drawer {
   position: absolute;
-  transform: translateX(-100%);
+  transform: translateX(100%);
   visibility: hidden;
   z-index: 3;
-  left: 0;
+  right: 0;
   top: 100%;
-  width: calc(100vw - 4rem);
+  width: 450px;
   padding: 0;
   border: 0.1rem solid rgba(var(--color-foreground), 0.2);
   border-left: 0;
   background-color: rgb(var(--color-background));
   overflow-x: hidden;
+}
+
+@media screen and (max-width: 590px) {
+  .menu-drawer {
+    width: 350px;
+  }
 }
 
 .js .menu-drawer {
@@ -79,9 +85,6 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__navigation-container {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  align-content: space-between;
   overflow-y: auto;
   height: 100%;
 }
@@ -113,7 +116,7 @@ details[open].menu-opening > .menu-drawer__submenu {
 }
 
 .menu-drawer__menu-item {
-  padding: 1.1rem 3.2rem;
+  padding: 2.2rem 0;
   text-decoration: none;
   font-size: 1.8rem;
 }
@@ -141,7 +144,6 @@ details[open].menu-opening > .menu-drawer__submenu {
 .menu-drawer__menu-item--active,
 .menu-drawer__menu-item:focus,
 .menu-drawer__close-button:focus,
-.menu-drawer__menu-item:hover,
 .menu-drawer__close-button:hover {
   color: rgb(var(--color-foreground));
   background-color: rgba(var(--color-foreground), 0.04);
